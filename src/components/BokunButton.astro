@@ -1,0 +1,7 @@
+---
+import { site, ctaUrl } from '../config/site';
+const { label = 'Buy the Audio Guide', pos = 'inline', variant = 'primary' } = Astro.props;
+const href = ctaUrl(pos);
+const dataSrc = `https://widgets.bokun.io/online-sales/${site.product.bokunChannel}/experience/${site.product.bokunProduct}?partialView=1`;
+---
+<a class={`btn btn-${variant} bokunButton`} data-src={dataSrc} href={href} rel="nofollow noopener">{label}</a>

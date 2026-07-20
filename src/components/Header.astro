@@ -1,0 +1,14 @@
+---
+import { site } from '../config/site';
+---
+<header class="header">
+  <div style="width:100%;max-width:var(--maxw);margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;gap:12px">
+    <div class="brandline">Mont-Saint-Michel Guide <small>powered by {site.poweredBy}</small></div>
+    <details class="langsel">
+      <summary>🌍 EN</summary>
+      <div class="menu">
+        {site.languages.map((l) => (<a href={l.path + '/'}>{l.label}</a>))}
+      </div>
+    </details>
+  </div>
+</header>

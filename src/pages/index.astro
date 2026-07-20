@@ -1,0 +1,187 @@
+---
+import Base from '../layouts/Base.astro';
+import BokunButton from '../components/BokunButton.astro';
+import { site, ctaUrl } from '../config/site';
+
+const title = 'Mont-Saint-Michel Guide: Self-Guided Audio Tour, Tips & What to See (2026)';
+const description = 'The complete Mont-Saint-Michel guide — a self-guided island audio tour, plus how to get there, tides, tickets, where to stay and what to see. Made by TouringBee.';
+
+// Cluster links (30 masters). Slugs map to Drive masters; ported in Step 4.
+const clusters = [
+  ['mont-saint-michel-abbey-tickets','Abbey: Tickets, Hours & What You See Inside'],
+  ['how-to-get-to-mont-saint-michel','How to Get There: Train, Bus, Car & Shuttle'],
+  ['mont-saint-michel-from-paris-day-trip','From Paris: The Complete Day-Trip Guide'],
+  ['mont-saint-michel-tides','Tides: How to Read the Schedule'],
+  ['where-to-stay-mont-saint-michel','Where to Stay: Island vs Mainland'],
+  ['mont-saint-michel-map','Map: Best Walking Route to the Abbey'],
+  ['best-time-to-visit-mont-saint-michel','Best Time to Visit: Seasons, Crowds & Tides'],
+  ['mont-saint-michel-history','History: Abbey, Prison & UNESCO Site'],
+  ['mont-saint-michel-and-saint-malo-one-day','One Day at Mont-Saint-Michel & Saint-Malo'],
+  ['mont-saint-michel-parking','Parking: Prices, Shuttle & Walking'],
+  ['what-is-inside-mont-saint-michel','What Is Inside Mont-Saint-Michel?'],
+  ['mont-saint-michel-self-guided-tour','Self-Guided Tour: A 2-Hour Island Route'],
+  ['mont-saint-michel-restaurants','Restaurants & Tourist Traps to Avoid'],
+  ['la-mere-poulard-omelette','La Mère Poulard Omelette: Is It Worth It?'],
+  ['mont-saint-michel-never-captured','Why the English Never Captured It'],
+  ['mont-saint-michel-legend','The Legend of Saint Michael & Aubert’s Skull'],
+  ['mont-saint-michel-quicksand','Quicksand: Can You Walk Across the Bay?'],
+  ['mont-saint-michel-or-saint-malo','Mont-Saint-Michel or Saint-Malo?'],
+  ['two-days-mont-saint-michel-saint-malo','Two Days: Mont-Saint-Michel & Saint-Malo'],
+  ['mont-saint-michel-at-night','Mont-Saint-Michel at Night'],
+  ['mont-saint-michel-viewpoints-photo-spots','Best Viewpoints & Photo Spots'],
+  ['do-people-live-on-mont-saint-michel','Do People Live on Mont-Saint-Michel?'],
+  ['mont-saint-michel-architecture','Architecture: A Gothic Abbey on a Rock'],
+  ['mont-saint-michel-bridge-and-dam','Bridge & Dam: How It Became an Island Again'],
+  ['mont-saint-michel-museums','Museums: Which Ones Are Worth It?'],
+  ['house-of-tiphaine-mont-saint-michel','The House of Tiphaine'],
+  ['mont-saint-michel-food-guide','Food Guide: Lamb, Oysters, Crêpes & Cider'],
+  ['mont-saint-michel-to-saint-malo','Mont-Saint-Michel to Saint-Malo: Transport'],
+  ['mont-saint-michel-facts','30 Fascinating Facts & Myths'],
+];
+
+const faqs = [
+  ['Is the audio tour offline?','Yes. Once you download the tour in the TouringBee app, the map and audio work fully offline — important on the island, where signal is patchy.'],
+  ['What languages are available?','The Mont-Saint-Michel island audio guide is available in 8 languages: English, French, German, Spanish, Italian, Portuguese, Polish and Russian.'],
+  ['Does it include abbey entry?','No. The tour covers the town and ramparts and leads up to the abbey; entry inside the abbey is a separate ticket.'],
+  ['How long is the tour?','About two hours at your own pace, with 17 stops from the shore up to the ramparts.'],
+  ['Can I use it on iPhone and Android?','Yes — the TouringBee app runs on both. You just need your own phone and headphones.'],
+  ['Is Mont-Saint-Michel surrounded by water all the time?','No — only on the higher (spring) tides. Check the tide calendar to catch the island ringed by the sea.'],
+];
+
+const jsonld = [
+  { '@context':'https://schema.org','@type':'TouristAttraction', name:'Mont-Saint-Michel',
+    description, url: site.baseUrl,
+    address:{'@type':'PostalAddress', addressCountry:'FR', addressRegion:'Normandy'} },
+  { '@context':'https://schema.org','@type':'Product', name:'Mont-Saint-Michel: self-guided island audio tour',
+    description:'Self-guided audio tour of the island: 17 stops, offline map, 8 languages.',
+    brand:{'@type':'Brand', name:'TouringBee'},
+    aggregateRating:{'@type':'AggregateRating', ratingValue:String(site.product.rating), reviewCount:String(site.product.reviewCount)},
+    offers:{'@type':'Offer', price:site.product.price, priceCurrency:site.product.currency, url:site.product.url, availability:'https://schema.org/InStock'} },
+  { '@context':'https://schema.org','@type':'FAQPage',
+    mainEntity: faqs.map(([q,a])=>({'@type':'Question', name:q, acceptedAnswer:{'@type':'Answer', text:a}})) },
+  { '@context':'https://schema.org','@type':'BreadcrumbList',
+    itemListElement:[{'@type':'ListItem',position:1,name:'Mont-Saint-Michel Guide',item:site.baseUrl}] },
+];
+---
+<Base title={title} description={description} path="/" jsonld={jsonld}>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="stars">★★★★★ <span style="color:#fff;font-weight:400">4.8 · 8 languages · offline</span></p>
+      <h1>Explore Mont-Saint-Michel with your own audio guide</h1>
+      <p>A self-paced walking tour of the island — from the shore to the abbey — full of history, legends and practical tips.</p>
+      <div class="cta-row">
+        <a class="btn btn-ghost" href="#tour">See what's inside</a>
+        <BokunButton label="Buy the Audio Guide" pos="hero" />
+        <a class="btn btn-secondary" href="#preview" style="background:#fff">🎧 Listen to preview</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IS THIS TOUR -->
+  <section class="section" id="tour"><div class="wrap">
+    <h2>What is this tour?</h2>
+    <p>A self-guided audio tour of Mont-Saint-Michel you follow on your phone, at your own pace. An offline GPS map links 17 stops from the mainland shore up to the ramparts, with stories written by a historian — the dam, the salt-meadow sheep, the gates, the Grande Rue, the church and the fortifications.</p>
+    <div class="chips"><span class="chip">🎧 17 audio stops</span><span class="chip">🕰 ~2 hours</span><span class="chip">📱 Offline app</span><span class="chip">📍 GPS map</span><span class="chip">🌍 8 languages</span></div>
+    <div class="card" style="max-width:520px;margin-top:16px">
+      <strong>Mont-Saint-Michel: audioguide of the island</strong>
+      <p class="stars">★★★★★ <span class="muted">{site.product.rating}</span></p>
+      <p class="muted">What's included: offline map · 17 audio recordings · illustrations · works with no internet. <em>Abbey entry not included.</em></p>
+      <p style="font-size:1.3rem;font-weight:800">From €{site.product.price}</p>
+      <div class="cta-row">
+        <BokunButton label="Buy Now" pos="product_card" />
+        <a class="btn btn-secondary" href="#preview">Listen to Demo</a>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- PREVIEW AUDIO -->
+  <section class="section soft" id="preview"><div class="wrap">
+    <h2>Hear the guide before you go</h2>
+    <p class="muted">A 30-second sample — the same voice that walks you from the shore to the abbey.</p>
+    <div class="audio"><audio controls src={site.audioPreview}></audio></div>
+    <p><BokunButton label="Get the audio guide" pos="preview" /></p>
+  </div></section>
+
+  <!-- WHY VISIT -->
+  <section class="section"><div class="wrap">
+    <h2>Why visit Mont-Saint-Michel?</h2>
+    <div class="chips"><span class="chip">History</span><span class="chip">Legends</span><span class="chip">Architecture</span><span class="chip">The Tides</span><span class="chip">Food</span></div>
+    <p>Almost nowhere else in Europe combines a thousand-year-old abbey, a walled medieval town and one of the continent's largest tidal ranges in a single view. Twice a day the sea sweeps across the bay, and on the strongest tides the Mont becomes an island again.</p>
+  </div></section>
+
+  <!-- WHAT YOU'LL DISCOVER (no full route reveal) -->
+  <section class="section soft"><div class="wrap">
+    <h2>What you'll discover</h2>
+    <div class="grid grid-3">
+      <div class="card"><strong>The bay & the dam</strong><p class="muted">Why the tides are the fastest in Europe — and how engineers kept the Mont an island.</p></div>
+      <div class="card"><strong>The King's Gate & Grande Rue</strong><p class="muted">Through the medieval defences and up the island's single climbing street.</p></div>
+      <div class="card"><strong>Saint-Pierre & the cemetery</strong><p class="muted">The quiet corners a few steps off the crowd.</p></div>
+      <div class="card"><strong>The ramparts & Tour du Nord</strong><p class="muted">The widest bay views and the fortifications the English never broke.</p></div>
+      <div class="card"><strong>Legends & stories</strong><p class="muted">Aubert's skull, the omelette, Tiphaine's house — the tales behind the stones.</p></div>
+      <div class="card"><strong>17 stops, shore to summit</strong><p class="muted">A single logical climb, so nothing important gets missed.</p></div>
+    </div>
+  </div></section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section"><div class="wrap">
+    <h2>How the audio tour works</h2>
+    <div class="grid grid-3">
+      <div class="card">🛒 <strong>1. Buy the guide</strong><p class="muted">Instant access, available anytime for a year.</p></div>
+      <div class="card">📱 <strong>2. Download the app</strong><p class="muted">Get the TouringBee app and download the tour on the mainland.</p></div>
+      <div class="card">📍 <strong>3. Start at the tourist office</strong><p class="muted">Follow the offline map and walk at your own pace — pause and resume anytime.</p></div>
+    </div>
+  </div></section>
+
+  <!-- VISITING / TICKET / MAP -->
+  <section class="section soft" id="visit"><div class="wrap">
+    <h2>Visiting Mont-Saint-Michel</h2>
+    <table>
+      <tr><th>Is the village free?</th><td>Yes — the town and ramparts are free. The abbey is a separate ticket. [VERIFY 2026]</td></tr>
+      <tr><th>Getting there</th><td>Park on the mainland; free shuttle or a 35–45 min walk across the bridge (2.5 km).</td></tr>
+      <tr><th>Where is it?</th><td>Normandy, on the Brittany border. [VERIFY 2026: 50170]</td></tr>
+      <tr><th>Tides</th><td>Check the tide calendar to see the island surrounded by water.</td></tr>
+    </table>
+    <p class="muted">Full detail in our guides below.</p>
+  </div></section>
+
+  <!-- LIVE GUIDED TOURS (affiliate, second tier) -->
+  <section class="section"><div class="wrap">
+    <h2>Prefer a live guided tour?</h2>
+    <p class="muted">If you'd rather join a person, day tours and bay walks are available from partners. <!-- TODO: GetYourGuide / Tiqets / Musement affiliate widgets --></p>
+  </div></section>
+
+  <!-- REVIEWS (seed) -->
+  <section class="section soft"><div class="wrap">
+    <h2>What travellers say</h2>
+    <div class="grid grid-3">
+      <div class="card"><p class="stars">★★★★★</p><p>“Perfect for exploring at our own pace — the stories made the climb come alive.”</p><p class="muted">— Sarah, 🇬🇧</p></div>
+      <div class="card"><p class="stars">★★★★★</p><p>“Worked offline the whole time. We didn't get lost once in the lanes.”</p><p class="muted">— Thomas, 🇩🇪</p></div>
+      <div class="card"><p class="stars">★★★★★</p><p>“Way better than rushing with a group. Loved the legends.”</p><p class="muted">— Elena, 🇮🇹</p></div>
+    </div>
+    <p class="muted" style="font-size:.85rem">[VERIFY: replace with real reviews]</p>
+  </div></section>
+
+  <!-- PLAN YOUR VISIT (clusters) -->
+  <section class="section" id="plan"><div class="wrap">
+    <h2>Plan your visit — all our Mont-Saint-Michel guides</h2>
+    <div class="grid grid-2">
+      {clusters.map(([slug,label]) => (<a class="card" href={`/articles/${slug}/`}>{label}</a>))}
+    </div>
+  </div></section>
+
+  <!-- FAQ -->
+  <section class="section soft" id="faq"><div class="wrap faq">
+    <h2>Frequently asked questions</h2>
+    {faqs.map(([q,a]) => (<details><summary>{q}</summary><p>{a}</p></details>))}
+  </div></section>
+
+  <!-- FINAL CTA -->
+  <section class="section"><div class="wrap" style="text-align:center">
+    <h2>Wander among legends — at your own pace</h2>
+    <p class="muted">Download the guide, start at the shore, and let the island tell you its stories all the way to the abbey.</p>
+    <p><BokunButton label="Get the Audio Tour" pos="final" /></p>
+  </div></section>
+
+</Base>
