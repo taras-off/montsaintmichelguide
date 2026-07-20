@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import { site } from '../../config/site';
+import Base from '../../layouts/Base.astro';
+import BokunButton from '../../components/BokunButton.astro';
+export async function getStaticPaths() {
+  const items = await getCollection('articles');
+  return items.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const path = `/articles/${entry.slug}/`;
+const jsonld = [{
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: entry.data.title, description: entry.data.description,
+}];
+---
+<Base title={entry.data.title} description={entry.data.description} path={path} jsonld={jsonld}>
+  <main class="section"><div class="wrap" style="max-width:760px">
+    <h1>{entry.data.title}</h1>
+    <div class="audio">
+      <strong>Hear the guide</strong>
+      <p class="muted">A 30-second sample of the self-guided island audio tour.</p>
+      <audio controls src={site.audioPreview}></audio>
+    </div>
+    <Content />
+    <p style="margin-top:24px"><BokunButton label="Get the Mont-Saint-Michel audio guide" pos="article_end" /></p>
+    <p><a href="/">← Back to the full Mont-Saint-Michel guide</a></p>
+  </div></main>
+</Base>

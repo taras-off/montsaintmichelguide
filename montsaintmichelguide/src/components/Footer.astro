@@ -1,0 +1,23 @@
+---
+import { site } from '../config/site';
+---
+<footer class="footer">
+  <div class="wrap footcols">
+    <div><strong>Explore</strong>
+      <a href="/#tour">The Audio Tour</a><a href="/#visit">Visiting & Map</a><a href="/#faq">FAQ</a><a href="/#plan">All Guides</a>
+    </div>
+    <div><strong>Legal</strong>
+      <a href="/privacy/">Privacy</a><a href="/terms/">Terms</a>
+    </div>
+    <div><strong>Contact</strong>
+      <a href="https://touringbee.com">TouringBee</a>
+    </div>
+    <div><strong>Languages</strong>
+      {site.languages.map((l) => (<a href={l.path + '/'}>{l.label}</a>))}
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:24px">
+    <p class="muted">© {new Date().getFullYear()} {site.domain} · An independent guide powered by {site.poweredBy}.</p>
+    <p class="muted" style="font-size:.82rem">This website is independent and not affiliated with the abbey administration or local authorities.</p>
+  </div>
+</footer>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://montsaintmichelguide.com/sitemap-index.xml
