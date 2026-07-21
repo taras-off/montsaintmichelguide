@@ -31,7 +31,7 @@
 <link rel="preload" as="image" href="/img/hero-768.webp" media="(max-width:640px)" fetchpriority="high">
 <link rel="preload" as="image" href="/img/hero-1536.webp" media="(min-width:641px)" fetchpriority="high">
 <style>
-:root{--ink:#16202a;--muted:#5c6b78;--line:#e4ebf0;--brand:#2d9cdf;--brand-d:#1f81bd;--bg:#fff;--soft:#f2f8fc;--star:#f5a623;--dark:#16202a}
+:root{--ink:#16202a;--muted:#5c6b78;--line:#e4ebf0;--brand:#2d9cdf;--brand-d:#15688f;--bg:#fff;--soft:#f2f8fc;--star:#f5a623;--dark:#16202a}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{margin:0;font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
@@ -43,11 +43,11 @@ img{max-width:100%;height:auto;display:block}
 a{color:var(--brand-d)}
 section{padding:52px 0;border-bottom:1px solid var(--line)}
 .center{text-align:center}
-.btn{display:inline-block;background:var(--brand);color:#fff;text-decoration:none;font-weight:600;padding:14px 26px;border-radius:10px;font-size:16px;border:0;cursor:pointer;margin:6px;box-shadow:0 4px 14px rgba(45,156,223,.28)}
+.btn{display:inline-block;background:#1a7ab0;color:#fff;text-decoration:none;font-weight:600;padding:14px 26px;border-radius:10px;font-size:16px;border:0;cursor:pointer;margin:6px;box-shadow:0 4px 14px rgba(45,156,223,.28)}
 .btn:hover{background:var(--brand-d)}
 .btn.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.85);box-shadow:none}
 .btn.dark{background:#fff;color:var(--ink);box-shadow:0 4px 14px rgba(0,0,0,.15)}
-.btn.outline{background:#fff;color:var(--brand);border:1.5px solid var(--brand);box-shadow:none}
+.btn.outline{background:#fff;color:var(--brand-d);border:1.5px solid var(--brand);box-shadow:none}
 .lead{font-size:19px;color:#333}
 .prose{max-width:780px;margin:0 auto}
 .prose h3{font-size:21px;margin:1.5em 0 .35em}
@@ -64,7 +64,7 @@ header.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);bac
 .brand{font-weight:800;font-size:18px;letter-spacing:.2px}
 .brand span{color:var(--brand)}
 .lang{font-size:13px;color:var(--muted)}
-.lang a{color:var(--muted);text-decoration:none;margin:0 3px}
+.lang a{color:var(--muted);text-decoration:none;margin:0 3px;padding:6px 4px;display:inline-block}
 .lang a.on{color:var(--ink);font-weight:700}
 .hero{position:relative;color:#fff;text-align:center;padding:96px 20px;background:linear-gradient(rgba(20,28,33,.55),rgba(20,28,33,.6)),url('/img/hero-1536.webp') center/cover}
 .hero h1{font-size:42px;line-height:1.12;margin:.1em auto .25em;max-width:16ch}
@@ -94,7 +94,7 @@ header.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);bac
 .stop p{font-size:14px;color:var(--muted);margin:0}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:22px;counter-reset:s}
 .step{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:20px}
-.step::before{counter-increment:s;content:counter(s);display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:var(--brand);color:#fff;border-radius:50%;font-weight:700;margin-bottom:8px}
+.step::before{counter-increment:s;content:counter(s);display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:#1a7ab0;color:#fff;border-radius:50%;font-weight:700;margin-bottom:8px}
 .info{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:20px}
 .info div{border:1px solid var(--line);border-radius:10px;padding:14px 16px}
 .info b{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);margin-bottom:2px}
@@ -124,8 +124,8 @@ header.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);bac
 .final .btn{background:#fff;color:var(--brand-d);box-shadow:0 6px 18px rgba(0,0,0,.18)}
 footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-top:1px solid var(--line)}
 .fcols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:24px}
-.fcols h4{font-size:15px;color:var(--ink);margin:0 0 10px}
-.fcols a{color:var(--muted);text-decoration:none;display:block;margin:5px 0}
+.fcols h3{font-size:15px;color:var(--ink);margin:0 0 10px}
+.fcols a{color:var(--muted);text-decoration:none;display:block;margin:2px 0;padding:4px 0}
 .fcols a:hover{color:var(--brand-d)}
 .qr{display:flex;gap:12px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:14px;max-width:240px}
 .qr .box{width:64px;height:64px;border-radius:8px;background:var(--soft);display:flex;align-items:center;justify-content:center;color:var(--brand);font-size:11px;text-align:center}
@@ -139,7 +139,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 .stickybuy .btn{margin:0;padding:11px 22px}
 @media(min-width:900px){.stickybuy{left:auto;right:24px;bottom:24px;border-radius:14px;border:1px solid var(--line)}}
 @media(max-width:720px){.fcols{grid-template-columns:1fr 1fr}}
-@media(max-width:640px){.product-card{grid-template-columns:1fr}.hero h1{font-size:32px}.hero{padding:70px 18px;background-image:linear-gradient(rgba(20,28,33,.55),rgba(20,28,33,.6)),url('/img/hero-768.webp')}}
+@media(max-width:640px){.product-card{grid-template-columns:1fr}.hero h1{font-size:32px}.hero{padding:70px 18px;background-image:linear-gradient(rgba(20,28,33,.55),rgba(20,28,33,.6)),url('/img/hero-768.webp')}.topbar{height:auto;flex-wrap:wrap;gap:4px;padding:8px 0}.lang a{padding:8px 7px}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -171,10 +171,11 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <div class="brand">Mont-Saint-Michel<span>Guide</span></div>
 <nav class="lang"><a href="/">EN</a><a class="on" href="/fr/">FR</a><a href="/de/">DE</a><a href="/es/">ES</a><a href="/it/">IT</a><a href="/pt/">PT</a><a href="/pl/">PL</a><a href="/ru/">RU</a></nav>
 </div></header>
+<main>
 
 <!-- 1. HERO -->
 <div class="hero">
-<div class="rating"><span class="star">&#9733;</span> 7 277 voyageurs ont déjà exploré ce guide</div>
+<div class="rating"><span class="star" aria-hidden="true">&#9733;</span> 7 277 voyageurs ont déjà exploré ce guide</div>
 <h1>Mont-Saint-Michel : le guide complet de l'abbaye, de la baie et des marées</h1>
 <p>L'histoire, les marées et comment visiter — plus un audioguide à votre rythme pour la balade elle-même.</p>
 <div>
@@ -200,7 +201,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <div class="product-card">
 <img class="pc-img" width="1024" height="768" loading="lazy" decoding="async" src="/img/view-1024.webp" alt="Audioguide autonome du Mont-Saint-Michel">
 <div class="pc-body" style="text-align:left">
-<div class="pc-rating"><span class="star">&#9733;</span> Utilisé par 7 277 voyageurs · avis sur Viator et GetYourGuide</div>
+<div class="pc-rating"><span class="star" aria-hidden="true">&#9733;</span> Utilisé par 7 277 voyageurs · avis sur Viator et GetYourGuide</div>
 <h3>Audioguide autonome du Mont-Saint-Michel<span class="badge">Accès immédiat</span></h3>
 <div class="pc-price">Dès 9,99 € <small>· accès 1 an</small></div>
 <ul class="features">
@@ -315,12 +316,12 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <h2>Ce que disent les voyageurs</h2>
 <p style="color:var(--muted);margin-top:-6px">Avis vérifiés de voyageurs sur Viator et GetYourGuide.</p>
 <div class="reviews">
-<div class="review">« L'appli est simple à utiliser, distrayante et instructive. Les commentaires sont bien faits et la carte marche très bien. Et le rapport qualité-prix est excellent. »<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="who">Louis M. · Viator</div></div>
-<div class="review">« Facile et très instructif — largement à la hauteur du prix. On a tellement aimé qu'on prend aussi celui de Paris. »<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="who">Deborah M. · Viator</div></div>
-<div class="review">« Beaucoup de détails sur l'histoire de l'îlot. On a vu et compris des choses qu'on aurait ratées sans la visite. »<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="who">Melissa F. · Viator</div></div>
-<div class="review">« Un super compagnon pendant ma visite du Mont-Saint-Michel — intéressant, plaisant et amusant. Le lieu est irréel et magique. »<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="who">Carolina H. · Viator</div></div>
-<div class="review">« La vue d'en haut est mémorable, et avec l'audioguide on fait la balade à son rythme. »<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="who">Pierre-Paul · Canada · GetYourGuide</div></div>
-<div class="review">« Parfait — de jolies descriptions, de petites anecdotes sympas et des prix honnêtes. »<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div><div class="who">Baray · France · GetYourGuide</div></div>
+<div class="review">« L'appli est simple à utiliser, distrayante et instructive. Les commentaires sont bien faits et la carte marche très bien. Et le rapport qualité-prix est excellent. »<div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="who">Louis M. · Viator</div></div>
+<div class="review">« Facile et très instructif — largement à la hauteur du prix. On a tellement aimé qu'on prend aussi celui de Paris. »<div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="who">Deborah M. · Viator</div></div>
+<div class="review">« Beaucoup de détails sur l'histoire de l'îlot. On a vu et compris des choses qu'on aurait ratées sans la visite. »<div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="who">Melissa F. · Viator</div></div>
+<div class="review">« Un super compagnon pendant ma visite du Mont-Saint-Michel — intéressant, plaisant et amusant. Le lieu est irréel et magique. »<div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="who">Carolina H. · Viator</div></div>
+<div class="review">« La vue d'en haut est mémorable, et avec l'audioguide on fait la balade à son rythme. »<div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="who">Pierre-Paul · Canada · GetYourGuide</div></div>
+<div class="review">« Parfait — de jolies descriptions, de petites anecdotes sympas et des prix honnêtes. »<div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</div><div class="who">Baray · France · GetYourGuide</div></div>
 </div>
 </div></section>
 
@@ -387,16 +388,17 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <a class="btn" href="https://touringbee.com/fr/product/mont-saint-michel-audioguide-fr/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=landing&utm_content=final">Obtenir l'audioguide — dès 9,99 €</a>
 </div></section>
 
+</main>
 <footer><div class="wrap">
 <div class="fcols">
 <div>
 <div class="fbrand">Mont-Saint-Michel<span>Guide</span></div>
 <div class="qr"><div class="box">QR<br>app</div><div>Téléchargez<br>l'appli TouringBee</div></div>
 </div>
-<div><h4>Explorer</h4><a href="#inside">Audioguide</a><a href="/fr/mont-saint-michel-tides/">Guide des marées</a><a href="#preview">Comment ça marche</a><a href="https://touringbee.com/fr/shop-tbee-fr/">Toutes les visites</a></div>
-<div><h4>Mentions légales</h4><a href="/privacy-policy.html">Politique de confidentialité</a><a href="https://touringbee.com/terms-and-conditions-of-use/" target="_blank" rel="noopener">Conditions d'utilisation</a><a href="/affiliate-disclosure.html">Mentions d'affiliation</a><a href="https://touringbee.com/affiliate-home/" target="_blank" rel="noopener">Devenir affilié</a><a href="/privacy-policy.html#cookies">Cookies</a></div>
-<div><h4>Contact</h4><a href="mailto:info@touringbee.com">info@touringbee.com</a><a href="https://www.instagram.com/touringbeeapp" target="_blank" rel="noopener">Instagram</a><a href="https://www.youtube.com/@TouringBee" target="_blank" rel="noopener">YouTube</a></div>
-<div><h4>Langues</h4><a href="/">English</a><a href="/fr/">Français</a><a href="/de/">Deutsch</a><a href="/es/">Español</a><a href="/it/">Italiano</a><a href="/ru/">Русский</a></div>
+<div><h3>Explorer</h3><a href="#inside">Audioguide</a><a href="/fr/mont-saint-michel-tides/">Guide des marées</a><a href="#preview">Comment ça marche</a><a href="https://touringbee.com/fr/shop-tbee-fr/">Toutes les visites</a></div>
+<div><h3>Mentions légales</h3><a href="/privacy-policy.html">Politique de confidentialité</a><a href="https://touringbee.com/terms-and-conditions-of-use/" target="_blank" rel="noopener">Conditions d'utilisation</a><a href="/affiliate-disclosure.html">Mentions d'affiliation</a><a href="https://touringbee.com/affiliate-home/" target="_blank" rel="noopener">Devenir affilié</a><a href="/privacy-policy.html#cookies">Cookies</a></div>
+<div><h3>Contact</h3><a href="mailto:info@touringbee.com">info@touringbee.com</a><a href="https://www.instagram.com/touringbeeapp" target="_blank" rel="noopener">Instagram</a><a href="https://www.youtube.com/@TouringBee" target="_blank" rel="noopener">YouTube</a></div>
+<div><h3>Langues</h3><a href="/">English</a><a href="/fr/">Français</a><a href="/de/">Deutsch</a><a href="/es/">Español</a><a href="/it/">Italiano</a><a href="/ru/">Русский</a></div>
 </div>
 <div class="fbottom">© 2026 Guide du Mont-Saint-Michel · un projet TouringBee
 <div class="disclaimer">Ce site est indépendant et n'est pas affilié à l'Abbaye du Mont-Saint-Michel ni à l'administration locale.</div>
