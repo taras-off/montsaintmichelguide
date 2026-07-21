@@ -30,6 +30,8 @@
 <link rel="alternate" hreflang="pl" href="https://montsaintmichelguide.com/pl/">
 <link rel="alternate" hreflang="ru" href="https://montsaintmichelguide.com/ru/">
 <link rel="alternate" hreflang="x-default" href="https://montsaintmichelguide.com/">
+<link rel="preload" as="image" href="/img/hero-768.webp" media="(max-width:640px)" fetchpriority="high">
+<link rel="preload" as="image" href="/img/hero-1536.webp" media="(min-width:641px)" fetchpriority="high">
 <style>
 :root{--ink:#16202a;--muted:#5c6b78;--line:#e4ebf0;--brand:#2d9cdf;--brand-d:#1f81bd;--bg:#fff;--soft:#f2f8fc;--star:#f5a623;--dark:#16202a}
 *{box-sizing:border-box}
@@ -68,7 +70,7 @@ header.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);bac
 .lang a{color:var(--muted);text-decoration:none;margin:0 3px}
 .lang a.on{color:var(--ink);font-weight:700}
 /* hero */
-.hero{position:relative;color:#fff;text-align:center;padding:96px 20px;background:linear-gradient(rgba(20,28,33,.55),rgba(20,28,33,.6)),url('https://touringbee.com/wp-content/uploads/mont-saint-michel-1536x1152.jpg') center/cover}
+.hero{position:relative;color:#fff;text-align:center;padding:96px 20px;background:linear-gradient(rgba(20,28,33,.55),rgba(20,28,33,.6)),url('/img/hero-1536.webp') center/cover}
 .hero h1{font-size:42px;line-height:1.12;margin:.1em auto .25em;max-width:14ch}
 .hero p{font-size:20px;max-width:34ch;margin:0 auto 1.2em;color:#f3efe9}
 .rating{display:inline-flex;align-items:center;gap:6px;font-size:14px;background:rgba(255,255,255,.15);padding:5px 12px;border-radius:20px;margin-bottom:14px}
@@ -152,7 +154,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 .stickybuy .btn{margin:0;padding:11px 22px}
 @media(min-width:900px){.stickybuy{left:auto;right:24px;bottom:24px;border-radius:14px;border:1px solid var(--line)}}
 @media(max-width:720px){.fcols{grid-template-columns:1fr 1fr}}
-@media(max-width:640px){.product-card{grid-template-columns:1fr}.hero h1{font-size:32px}.hero{padding:70px 18px}}
+@media(max-width:640px){.product-card{grid-template-columns:1fr}.hero h1{font-size:32px}.hero{padding:70px 18px;background-image:linear-gradient(rgba(20,28,33,.55),rgba(20,28,33,.6)),url('/img/hero-768.webp')}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -211,7 +213,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 </div>
 
 <div class="product-card">
-<img class="pc-img" src="https://touringbee.com/wp-content/uploads/mont-saint-michel-veiw-1024x768.jpg" alt="Mont-Saint-Michel self-guided audio tour">
+<img class="pc-img" width="1024" height="768" loading="lazy" decoding="async" src="/img/view-1024.webp" alt="Mont-Saint-Michel self-guided audio tour">
 <div class="pc-body" style="text-align:left">
 <div class="pc-rating"><span class="star">&#9733;</span> Used by 7,277 travelers · reviewed on Viator &amp; GetYourGuide</div>
 <h3>Mont-Saint-Michel Self-Guided Audio Tour<span class="badge">Instant access</span></h3>
@@ -277,12 +279,12 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <h2>What You'll Discover on the Tour</h2>
 <p>A handful of the places and stories waiting on the rock — the full route unfolds in the guide as you walk.</p>
 <div class="grid">
-<div class="stop"><img src="https://touringbee.com/wp-content/uploads/abbey-mont-saint-michel-768x576.jpg" alt="The abbey church of Mont-Saint-Michel"><div class="s-body"><h3>The Abbey Church</h3><p>Built on the summit of the rock, higher than any sane medieval builder should have dared.</p></div></div>
-<div class="stop"><img src="https://touringbee.com/wp-content/uploads/inside-abbay-mont-saint-michel-768x576.jpg" alt="La Merveille, the Gothic monastery of Mont-Saint-Michel"><div class="s-body"><h3>La Merveille</h3><p>The "Marvel" — three floors of Gothic halls that seem to defy the cliff they cling to.</p></div></div>
-<div class="stop"><img src="https://touringbee.com/wp-content/uploads/grande-rue-mont-saint-michel-768x576.jpg" alt="The Grande Rue of Mont-Saint-Michel village"><div class="s-body"><h3>The Grande Rue</h3><p>The single climbing street where pilgrims, merchants and today's crowds all pass.</p></div></div>
-<div class="stop"><img src="https://touringbee.com/wp-content/uploads/rampart-mont-saint-michel-scaled.jpg" alt="The ramparts of Mont-Saint-Michel over the bay"><div class="s-body"><h3>The Ramparts &amp; Bay</h3><p>Where you watch the fastest tide in Europe race across the sand below.</p></div></div>
-<div class="stop"><img src="https://touringbee.com/wp-content/uploads/cloitre-mont-saint-michel-768x576.jpg" alt="The cloister of Mont-Saint-Michel"><div class="s-body"><h3>The Cloister</h3><p>A garden in the sky, where monks walked between two worlds.</p></div></div>
-<div class="stop"><img src="https://touringbee.com/wp-content/uploads/treadmill-wheel-mont-saint-michel.png" alt="The prison history of Mont-Saint-Michel"><div class="s-body"><h3>The Prison Years</h3><p>How the sacred Mont spent decades as one of France's most feared jails.</p></div></div>
+<div class="stop"><img width="800" height="600" loading="lazy" decoding="async" src="/img/abbey-800.webp" alt="The abbey church of Mont-Saint-Michel"><div class="s-body"><h3>The Abbey Church</h3><p>Built on the summit of the rock, higher than any sane medieval builder should have dared.</p></div></div>
+<div class="stop"><img width="800" height="600" loading="lazy" decoding="async" src="/img/merveille-800.webp" alt="La Merveille, the Gothic monastery of Mont-Saint-Michel"><div class="s-body"><h3>La Merveille</h3><p>The "Marvel" — three floors of Gothic halls that seem to defy the cliff they cling to.</p></div></div>
+<div class="stop"><img width="800" height="600" loading="lazy" decoding="async" src="/img/granderue-800.webp" alt="The Grande Rue of Mont-Saint-Michel village"><div class="s-body"><h3>The Grande Rue</h3><p>The single climbing street where pilgrims, merchants and today's crowds all pass.</p></div></div>
+<div class="stop"><img width="800" height="600" loading="lazy" decoding="async" src="/img/ramparts-800.webp" alt="The ramparts of Mont-Saint-Michel over the bay"><div class="s-body"><h3>The Ramparts &amp; Bay</h3><p>Where you watch the fastest tide in Europe race across the sand below.</p></div></div>
+<div class="stop"><img width="800" height="600" loading="lazy" decoding="async" src="/img/cloister-800.webp" alt="The cloister of Mont-Saint-Michel"><div class="s-body"><h3>The Cloister</h3><p>A garden in the sky, where monks walked between two worlds.</p></div></div>
+<div class="stop"><img width="800" height="600" loading="lazy" decoding="async" src="/img/prison-800.webp" alt="The prison history of Mont-Saint-Michel"><div class="s-body"><h3>The Prison Years</h3><p>How the sacred Mont spent decades as one of France's most feared jails.</p></div></div>
 </div>
 </div></section>
 
@@ -342,10 +344,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <h2>Mont-Saint-Michel Like You've Never Seen It</h2>
 <p>Short films from the bay — the tide, the abbey, the stories.</p>
 <div class="videos">
-<div class="vid" style="background-image:linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.5)),url('https://touringbee.com/wp-content/uploads/mont-saint-michel-veiw-600x450.jpg')">The tide that traps you in minutes</div>
-<div class="vid" style="background-image:linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.5)),url('https://touringbee.com/wp-content/uploads/abbey-mont-saint-michel-600x450.jpg')">Why they built a church on a rock</div>
-<div class="vid" style="background-image:linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.5)),url('https://touringbee.com/wp-content/uploads/village-mont-saint-michel-600x450.jpg')">The one street everyone walks</div>
-<div class="vid" style="background-image:linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.5)),url('https://touringbee.com/wp-content/uploads/mont-saint-michel-600x450.jpg')">When the Mont becomes an island</div>
+<div class="vid" style="background-image:linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.5)),url('/img/view-600.webp')">The tide that traps you in minutes</div>
+<div class="vid" style="background-image:linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.5)),url('/img/abbey-600.webp')">Why they built a church on a rock</div>
+<div class="vid" style="background-image:linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.5)),url('/img/village-600.webp')">The one street everyone walks</div>
+<div class="vid" style="background-image:linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.5)),url('/img/hero-600.webp')">When the Mont becomes an island</div>
 </div>
 </div></section>
 
