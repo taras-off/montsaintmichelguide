@@ -192,12 +192,13 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <p>The history, the tides, and how to visit — plus a self-paced audio tour for the walk itself.</p>
 <div>
 <a class="btn dark" href="#inside">See What's Inside</a>
-<a class="btn" href="https://touringbee.com/product/mont-saint-michel-audioguide/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=landing&utm_content=hero">Buy the Audio Guide</a>
-<a class="btn ghost" href="#preview">Listen to Preview</a>
+<a class="btn bokunButton" href="https://touringbee.com/product/mont-saint-michel-audioguide/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=landing&utm_content=hero" data-src="https://widgets.bokun.io/online-sales/138300de-1767-4a3a-acec-eeb95ea97610/experience/835075?partialView=1" data-testid="widget-book-button">Buy the Audio Guide</a>
+<a class="btn ghost" href="#preview" onclick="var a=document.getElementById('previewAudio');if(a){a.play();}">Listen to Preview</a>
 </div>
 </div>
 
 <!-- 2. WHAT IS THIS TOUR -->
+<div id="preview" style="max-width:760px;margin:0 auto;padding:28px 20px;text-align:center;border-bottom:1px solid #e4ebf0"><h2 style="margin:0 0 6px">Hear the guide before you go</h2><p style="margin:0 0 14px;color:#5c6b78">A 30-second sample — the same voice that walks you from the shore to the abbey.</p><audio id="previewAudio" controls preload="none" style="width:100%;max-width:520px" src="https://touringbee.com/wp-content/uploads/normandyt1_en_intro-1.mp3"></audio></div>
 <section id="inside"><div class="wrap center">
 <h2>What Is This Tour?</h2>
 <p class="lead">A self-guided audio tour you play on your phone as you walk. GPS starts each story at the right spot, so you keep your eyes on the abbey, the bay and the ramparts — not on a screen. Buy once, use offline, keep it for a year.</p>
@@ -223,8 +224,8 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Self-guided, around 2–3 hours</li>
 </ul>
 <div style="display:flex;gap:10px;flex-wrap:wrap">
-<a class="btn" style="flex:1;text-align:center;margin:0" href="https://touringbee.com/product/mont-saint-michel-audioguide/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=landing&utm_content=card">Buy the Audio Guide</a>
-<a class="btn outline" style="margin:0" href="#preview">Listen to Demo</a>
+<a class="btn bokunButton" style="flex:1;text-align:center;margin:0" href="https://touringbee.com/product/mont-saint-michel-audioguide/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=landing&utm_content=card" data-src="https://widgets.bokun.io/online-sales/138300de-1767-4a3a-acec-eeb95ea97610/experience/835075?partialView=1" data-testid="widget-book-button">Buy the Audio Guide</a>
+<a class="btn outline" style="margin:0" href="#preview" onclick="var a=document.getElementById('previewAudio');if(a){a.play();}">Listen to Demo</a>
 </div>
 </div>
 </div>
@@ -286,7 +287,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 </div></section>
 
 <!-- 5. HOW IT WORKS -->
-<section id="preview"><div class="wrap">
+<section id="how"><div class="wrap">
 <h2>How the Audio Tour Works</h2>
 <div class="steps">
 <div class="step"><h3>Buy the guide</h3><p>One payment, instant access. No subscription.</p></div>
@@ -418,11 +419,12 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <!-- Sticky buy bar: mobile bottom / desktop bottom-right, appears after scroll -->
 <div class="stickybuy" id="stickybuy">
 <div class="p">Mont-Saint-Michel Audio Guide <small>· from &euro;9.99 · offline · 8 languages</small></div>
-<a class="btn" href="https://touringbee.com/product/mont-saint-michel-audioguide/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=landing&utm_content=stickybar">Buy &euro;9.99</a>
+<a class="btn bokunButton" href="https://touringbee.com/product/mont-saint-michel-audioguide/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=landing&utm_content=stickybar" data-src="https://widgets.bokun.io/online-sales/138300de-1767-4a3a-acec-eeb95ea97610/experience/835075?partialView=1" data-testid="widget-book-button">Buy &euro;9.99</a>
 </div>
 <script>(function(){var b=document.getElementById('stickybuy');if(!b)return;function s(){if(window.scrollY>800){b.classList.add('show')}else{b.classList.remove('show')}}window.addEventListener('scroll',s,{passive:true});s();})();</script>
 
 <!-- Bokun instant-buy loader (popup on click of any .); buttons fall back to the product page if it fails to load. -->
 
+<script type="text/javascript" src="https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=138300de-1767-4a3a-acec-eeb95ea97610" async></script>
 </body>
 </html>
