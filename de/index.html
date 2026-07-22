@@ -19,7 +19,8 @@
 <meta name="twitter:description" content="Die Geschichte, die Abtei, die berühmten Gezeiten, wie man ihn besucht — plus ein Audioguide zum Selbstführen.">
 <meta name="twitter:image" content="https://touringbee.com/wp-content/uploads/mont-saint-michel-1536x1152.jpg">
 <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
 <link rel="canonical" href="https://montsaintmichelguide.com/de/">
 <link rel="alternate" hreflang="en" href="https://montsaintmichelguide.com/">
 <link rel="alternate" hreflang="fr" href="https://montsaintmichelguide.com/fr/">
@@ -155,6 +156,47 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 @media(min-width:900px){.stickybuy{left:auto;right:24px;bottom:24px;border-radius:14px;border:1px solid var(--line)}}
 @media(max-width:720px){.fcols{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.product-card{grid-template-columns:1fr}.hero h1{font-size:32px}.hero{padding:70px 18px;background-image:linear-gradient(rgba(20,28,33,.55),rgba(20,28,33,.6)),url('/img/hero-768.webp')}.topbar{height:auto;flex-wrap:wrap;gap:4px;padding:8px 0}.lang a{padding:8px 7px}}
+/* header logo + guides menu */
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none}
+.brand img{width:30px;height:30px;display:block;border-radius:50%}
+.brand .bt{color:var(--ink);font-weight:800;font-size:18px;letter-spacing:.2px}
+.brand .g{color:var(--brand)}
+.nav-wrap{display:flex;align-items:center;gap:16px}
+.menu{position:relative}
+.menu>summary{list-style:none;cursor:pointer;font-size:14px;font-weight:600;color:var(--ink);display:inline-flex;align-items:center;gap:5px;padding:6px 4px}
+.menu>summary::-webkit-details-marker{display:none}
+.menu>summary svg{transition:transform .2s}
+.menu[open]>summary svg{transform:rotate(180deg)}
+.dropdown{position:absolute;right:0;top:calc(100% + 6px);background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,.14);min-width:260px;padding:8px;z-index:30}
+.dropdown a{display:block;padding:9px 12px;border-radius:8px;text-decoration:none;color:var(--ink);font-size:14px;margin:0}
+.dropdown a:hover{background:var(--soft)}
+.dropdown .all{border-top:1px solid var(--line);margin-top:6px;font-weight:700;color:var(--brand-d)}
+.btn.block{display:block;width:100%;text-align:center}
+/* ticket box */
+.ticketbox{border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.08);margin:26px auto 0;max-width:620px;text-align:left}
+.ticketbox .tb-head{background:linear-gradient(135deg,#2d9cdf,#1f81bd);color:#fff;padding:18px 22px}
+.ticketbox .tb-head h3{margin:0;font-size:19px;color:#fff}
+.ticketbox .tb-head p{margin:4px 0 0;font-size:14px;color:#eaf6ff}
+.ticketbox .tb-body{padding:20px 22px}
+.ticketbox .tb-price{font-size:15px;color:var(--muted);margin:0 0 12px}
+.ticketbox .tb-price b{font-size:22px;color:var(--ink)}
+.ticketbox ul.tb-feat{list-style:none;padding:0;margin:0 0 16px}
+.ticketbox ul.tb-feat li{padding:5px 0 5px 26px;position:relative;font-size:15px}
+.ticketbox ul.tb-feat li:before{content:"\2713";position:absolute;left:0;color:#2c9a4a;font-weight:800}
+.tb-fine{font-size:12px;color:var(--muted);margin:10px 0 0;text-align:center}
+/* partner cards with image */
+.partners{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.partner{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.07);display:flex;flex-direction:column;padding:0}
+.partner img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.partner .p-body{padding:15px 17px;display:flex;flex-direction:column;flex:1}
+.partner .plabel{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--brand-d);margin:0 0 3px}
+.partner h3{margin:0 0 4px;font-size:17px}
+.partner .meta{font-size:13px;color:var(--muted);margin:0 0 13px}
+.partner .btn{margin:auto 0 0;padding:10px 16px;font-size:14px}
+/* author box */
+.authorbox{display:flex;gap:22px;align-items:flex-start}
+.authorbox img{width:104px;height:104px;border-radius:50%;object-fit:cover;flex:0 0 auto;border:3px solid var(--soft)}
+@media(max-width:560px){.authorbox{flex-direction:column;align-items:center;text-align:center}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -183,8 +225,15 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <body>
 
 <header class="top"><div class="wrap topbar">
-<div class="brand">Mont-Saint-Michel<span>Guide</span></div>
+<a class="brand" href="/"><img src="/img/logo.webp" width="30" height="30" alt="Mont-Saint-Michel Guide logo"><span class="bt">Mont-Saint-Michel<span class="g">Guide</span></span></a>
+<div class="nav-wrap">
+<details class="menu"><summary>Guides <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+<div class="dropdown">
+<a href="/de/mont-saint-michel-abbey-tickets/">Abtei-Tickets: Preise &amp; was drin ist</a>
+<a class="all" href="/de/guides/">Alle Guides &rarr;</a>
+</div></details>
 <nav class="lang"><a href="/">EN</a><a href="/fr/">FR</a><a class="on" href="/de/">DE</a><a href="/es/">ES</a><a href="/it/">IT</a><a href="/pt/">PT</a><a href="/pl/">PL</a><a href="/ru/">RU</a></nav>
+</div>
 </div></header>
 <main>
 
@@ -197,6 +246,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <a class="btn dark" href="#inside">Ansehen, was drin ist</a>
 <a class="btn" href="https://touringbee.com/de/product/mont-saint-michel-audioguide-de/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=landing&utm_content=hero">Audioguide kaufen</a>
 <a class="btn ghost" href="#preview" onclick="var a=document.getElementById('previewAudio');if(a){a.play();}">Hörprobe anhören</a>
+<a class="btn dark" href="https://www.tiqets.com/mont-saint-michel-abbey-tickets-l145867/?partner=touringbee_limited-180893&tq_campaign=msmguide" target="_blank" rel="noopener sponsored">Ticket kaufen</a>
 </div>
 </div>
 
@@ -305,24 +355,42 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <section><div class="wrap">
 <h2>Den Mont-Saint-Michel besuchen</h2>
 <div class="info">
-<div><b>Eintritt</b>Insel und Wehrmauern gratis · Abtei-Ticket separat</div>
-<div><b>Öffnungszeiten Abtei</b>Etwa 9:30–18:00 Uhr (saisonal — vorher prüfen)</div>
+<div><b>Entry</b>Insel &amp; Wehrmauern frei · Abtei-Ticket ab 16 €</div>
+<div><b>Abbey hours</b>9–19 Uhr (Mai–Aug) · 9:30–18 Uhr (Sep–Apr)</div>
 <div><b>Address</b>50170 Le Mont-Saint-Michel, France</div>
 <div><b>Anreise</b>Parkplatz am Festland + Gratis-Shuttle oder ~2,5 km zu Fuß</div>
 <div><b>Mit dem Zug</b>Rennes oder Pontorson, dann ein Anschlussbus</div>
 <div><b>Map</b><a href="https://maps.google.com/?q=Mont-Saint-Michel" target="_blank" rel="noopener">In Google Maps öffnen →</a></div>
 </div>
+
+<div class="ticketbox">
+<div class="tb-head">
+<h3>Abtei Mont-Saint-Michel &mdash; Eintrittsticket</h3>
+<p>Zeitfenster-Einlass &middot; ohne Kassenschlange &middot; Mobil-Ticket</p>
+</div>
+<div class="tb-body">
+<p class="tb-price"><b>Ab 16 €</b> &middot; Erwachseneneintritt &middot; sofortige Bestätigung</p>
+<ul class="tb-feat">
+<li>Reservieren Sie eine feste Einlasszeit und gehen Sie an der Kassenschlange vorbei</li>
+<li>Mobil-Ticket — auf dem Handy vorzeigen, kein Ausdruck nötig</li>
+<li>Kostenlose Stornierung bis 24 Stunden bei den meisten Optionen</li>
+</ul>
+<a class="btn block" href="https://www.tiqets.com/mont-saint-michel-abbey-tickets-l145867/?partner=touringbee_limited-180893&tq_campaign=msmguide" target="_blank" rel="noopener sponsored">Verfügbarkeit prüfen & auf Tiqets buchen &rarr;</a>
+<p class="tb-fine">Buchung über unseren Partner Tiqets. Sie zahlen denselben Preis; wir erhalten ggf. eine kleine Provision.</p>
+</div>
+</div>
+<p class="center" style="margin-top:16px"><a href="/de/mont-saint-michel-abbey-tickets/">Kompletter Ticket-Guide — Preise, Zeiten &amp; Innenräume →</a></p>
 </div></section>
 
-<!-- OPTIONAL: LIVE GUIDED TOURS (affiliate) -->
-<section><div class="wrap">
-<h2>Lieber eine geführte Tour mit einem lokalen Experten?</h2>
-<p>Nicht jeder möchte allein losziehen. Wir haben top bewertete Touren vor Ort von vertrauenswürdigen Partnern zusammengestellt — buchen Sie sorgenfrei.</p>
-<p style="font-size:13px;color:var(--muted);background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 12px;display:inline-block">Einige Links auf dieser Seite sind Affiliate-Links (GetYourGuide, Booking.com). Wenn Sie darüber buchen, erhalten wir womöglich eine kleine Provision — ohne Aufpreis für Sie. Auf unsere Empfehlungen hat das nie Einfluss.</p>
+<!-- LIVE GUIDED TOURS & TICKETS (affiliate) -->
+<section style="background:var(--soft)"><div class="wrap">
+<h2>Tickets &amp; Führungen</h2>
+<p>Lieber ohne Schlange oder mit lokalem Guide? Vergleichen Sie unsere geprüften Partner — dieselben Preise wie direkt, sorglos gebucht.</p>
+<p style="font-size:13px;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 12px;display:inline-block">Einige Links unten sind Affiliate-Links (Tiqets, GetYourGuide, Headout, Booking.com). Wenn Sie darüber buchen, erhalten wir ggf. eine kleine Provision — ohne Mehrkosten für Sie. Auf unsere Empfehlungen hat das nie Einfluss.</p>
 <div class="partners">
-<div class="partner"><h3>Geführte Wanderung "Abtei und Bucht"</h3><div class="meta">Gruppentour · 2 Std. · Englisch · ab 30 €</div><a href="https://www.getyourguide.com/mont-saint-michel-l1805/?partner_id=0M4BUCG" target="_blank" rel="noopener sponsored">Auf GetYourGuide buchen →</a></div>
-<div class="partner"><h3>Geführte Buchtdurchquerung</h3><div class="meta">Kleingruppe · 2–3 Std. · mit lizenziertem Buchtführer</div><a href="https://www.getyourguide.com/mont-saint-michel-l1805/?partner_id=0M4BUCG" target="_blank" rel="noopener sponsored">Auf GetYourGuide buchen →</a></div>
-<div class="partner"><h3>Private Touren und Kleingruppen</h3><div class="meta">Verschieden · flexibel · mehrere Sprachen</div><a href="https://www.getyourguide.com/mont-saint-michel-l1805/?partner_id=0M4BUCG" target="_blank" rel="noopener sponsored">Alle auf GetYourGuide ansehen →</a></div>
+<div class="partner"><img width="800" height="500" loading="lazy" src="/img/abbey-800.webp" alt="Mont-Saint-Michel abbey"><div class="p-body"><div class="plabel">Tiqets</div><h3>Abtei-Ticket ohne Anstehen</h3><div class="meta">Zeitfenster · Mobil-Ticket · ab 16 €</div><a class="btn" href="https://www.tiqets.com/mont-saint-michel-abbey-tickets-l145867/?partner=touringbee_limited-180893&tq_campaign=msmguide" target="_blank" rel="noopener sponsored">Auf Tiqets buchen →</a></div></div>
+<div class="partner"><img width="800" height="500" loading="lazy" src="/img/ramparts-800.webp" alt="Guided walk on the ramparts of Mont-Saint-Michel"><div class="p-body"><div class="plabel">GetYourGuide</div><h3>Führungen &amp; Buchtwanderungen</h3><div class="meta">Abtei-Rundgänge, Buchtdurchquerungen und Tagesausflüge</div><a class="btn" href="https://www.getyourguide.com/mont-saint-michel-l1805/?partner_id=0M4BUCG&utm_medium=travel_agent" target="_blank" rel="noopener sponsored">Auf GetYourGuide buchen →</a></div></div>
+<div class="partner"><img width="800" height="500" loading="lazy" src="/img/merveille-800.webp" alt="La Merveille, Mont-Saint-Michel"><div class="p-body"><div class="plabel">Headout</div><h3>Tickets &amp; Erlebnisse</h3><div class="meta">Einlass ohne Anstehen &amp; geführte Optionen</div><a class="btn" href="https://www.headout.com/mont-st-michel-tickets-and-tours/tickets-to-mont-saint-michel-abbey-e-11015/?affiliate_code=e3iLju&currency=EUR&language=en&utm_content=link&utm_medium=affiliate&utm_source=touringbee.com" target="_blank" rel="noopener sponsored">Auf Headout buchen →</a></div></div>
 </div>
 </div></section>
 
@@ -337,18 +405,6 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <div class="review">"Ein toller Begleiter bei meiner Tour über den Mont-Saint-Michel — interessant, unterhaltsam und mit Spaß. Der Ort ist unwirklich und mythisch."<div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="who">Carolina H. · Viator</div></div>
 <div class="review">"Der Blick von oben bleibt im Gedächtnis, und mit dem Audioguide macht man den Rundgang im eigenen Tempo."<div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="who">Pierre-Paul · Kanada · GetYourGuide</div></div>
 <div class="review">"Perfekt — schöne Beschreibungen, nette kleine Anekdoten und faire Preise."<div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</div><div class="who">Baray · Frankreich · GetYourGuide</div></div>
-</div>
-</div></section>
-
-<!-- 8. VIDEO / REELS -->
-<section><div class="wrap">
-<h2>Der Mont-Saint-Michel, wie Sie ihn noch nie gesehen haben</h2>
-<p>Kurze Filme aus der Bucht — die Gezeit, die Abtei, die Geschichten.</p>
-<div class="videos">
-<div class="vid" style="background-image:linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.5)),url('/img/view-600.webp')">Die Gezeit, die Sie in Minuten einschließt</div>
-<div class="vid" style="background-image:linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.5)),url('/img/abbey-600.webp')">Warum sie eine Kirche auf einen Felsen bauten</div>
-<div class="vid" style="background-image:linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.5)),url('/img/village-600.webp')">Die eine Gasse, die alle gehen</div>
-<div class="vid" style="background-image:linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.5)),url('/img/hero-600.webp')">Wenn der Mont-Saint-Michel zur Insel wird</div>
 </div>
 </div></section>
 
@@ -392,8 +448,13 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <!-- ABOUT / E-E-A-T -->
 <section><div class="wrap prose">
 <h2>Über den Autor</h2>
-<p>Diesen Guide schreibt <strong>Eugene</strong>, der seit 16 Jahren in Frankreich lebt und als Reiseführer arbeitete, bevor er das Content-Netzwerk paris10.travel gründete. Im Lauf der Jahre hat er über 300 französische Städte und Dörfer erkundet — und viel über den Mont-Saint-Michel geschrieben, darunter die TouringBee-Audiotour der Insel. Jedes Datum und Detail hier ist an offiziellen und historischen Quellen geprüft, nicht von anderen Seiten kopiert.</p>
+<div class="authorbox">
+<img src="/img/author-eugene.webp" width="104" height="104" loading="lazy" alt="Eugene, Autor des Mont-Saint-Michel-Guides">
+<div>
+<p style="margin-top:0">Diesen Guide schreibt <strong>Eugene</strong>, der seit 16 Jahren in Frankreich lebt und als Reiseführer arbeitete, bevor er das Content-Netzwerk paris10.travel gründete. Im Lauf der Jahre hat er über 300 französische Städte und Dörfer erkundet — und viel über den Mont-Saint-Michel geschrieben, darunter die TouringBee-Audiotour der Insel. Jedes Datum und Detail hier ist an offiziellen und historischen Quellen geprüft, nicht von anderen Seiten kopiert.</p>
 <p>Das Ziel ist einfach: dass Sie sich nach fünf Minuten sicherer, neugieriger und besser vorbereitet fühlen als zuvor — und, wenn Sie die ganze Geschichte vor Ort wollen, sie mit Ihnen über die App zu gehen.</p>
+</div>
+</div>
 </div></section>
 
 <!-- 11. FINAL CTA -->
