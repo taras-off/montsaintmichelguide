@@ -17,7 +17,8 @@
 <meta name="twitter:description" content="Preços e horários de 2026, tipos de bilhete, a melhor altura para subir e um percurso pela abadia sala a sala.">
 <meta name="twitter:image" content="https://touringbee.com/wp-content/uploads/mont-saint-michel-1536x1152.jpg">
 <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
 <link rel="canonical" href="https://montsaintmichelguide.com/pt/mont-saint-michel-abbey-tickets/">
 <link rel="alternate" hreflang="en" href="https://montsaintmichelguide.com/mont-saint-michel-abbey-tickets/">
 <link rel="alternate" hreflang="fr" href="https://montsaintmichelguide.com/fr/mont-saint-michel-abbey-tickets/">
@@ -39,8 +40,20 @@ a{color:var(--brand-d)}
 /* header */
 header.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
 .topbar{display:flex;align-items:center;justify-content:space-between;height:56px}
-.brand{font-weight:800;font-size:18px;letter-spacing:.2px;text-decoration:none;color:var(--ink)}
-.brand span{color:var(--brand)}
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none}
+.brand img{width:30px;height:30px;display:block;border-radius:50%}
+.brand .bt{color:var(--ink);font-weight:800;font-size:18px;letter-spacing:.2px}
+.brand .g{color:var(--brand)}
+.nav-wrap{display:flex;align-items:center;gap:16px}
+.menu{position:relative}
+.menu>summary{list-style:none;cursor:pointer;font-size:14px;font-weight:600;color:var(--ink);display:inline-flex;align-items:center;gap:5px;padding:6px 4px}
+.menu>summary::-webkit-details-marker{display:none}
+.menu>summary svg{transition:transform .2s}
+.menu[open]>summary svg{transform:rotate(180deg)}
+.dropdown{position:absolute;right:0;top:calc(100% + 6px);background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,.14);min-width:260px;padding:8px;z-index:30}
+.dropdown a{display:block;padding:9px 12px;border-radius:8px;text-decoration:none;color:var(--ink);font-size:14px;margin:0}
+.dropdown a:hover{background:var(--soft)}
+.dropdown .all{border-top:1px solid var(--line);margin-top:6px;font-weight:700;color:var(--brand-d)}
 .lang{font-size:13px;color:var(--muted)}
 .lang a{color:var(--muted);text-decoration:none;margin:0 3px;padding:6px 4px;display:inline-block}
 .lang a.on{color:var(--ink);font-weight:700}
@@ -173,8 +186,15 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <body>
 
 <header class="top"><div class="wrap topbar">
-<a class="brand" href="/pt/">Mont-Saint-Michel<span>Guide</span></a>
+<a class="brand" href="/pt/"><img src="../../img/logo.webp" width="30" height="30" alt="Mont-Saint-Michel Guide logo"><span class="bt">Mont-Saint-Michel<span class="g">Guide</span></span></a>
+<div class="nav-wrap">
+<details class="menu"><summary>Guias <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+<div class="dropdown">
+<a href="/pt/mont-saint-michel-abbey-tickets/">Bilhetes da abadia: preços e o que ver</a>
+<a class="all" href="/pt/guides/">Todos os guias &rarr;</a>
+</div></details>
 <nav class="lang"><a href="/pt/mont-saint-michel-abbey-tickets/">EN</a><a href="/fr/mont-saint-michel-abbey-tickets/">FR</a><a href="/de/mont-saint-michel-abbey-tickets/">DE</a><a href="/es/mont-saint-michel-abbey-tickets/">ES</a><a href="/it/mont-saint-michel-abbey-tickets/">IT</a><a class="on" href="/pt/mont-saint-michel-abbey-tickets/">PT</a><a href="/pl/mont-saint-michel-abbey-tickets/">PL</a><a href="/ru/mont-saint-michel-abbey-tickets/">RU</a></nav>
+</div>
 </div></header>
 
 <main>
