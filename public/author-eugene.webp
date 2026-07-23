@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Guide di Mont-Saint-Michel: biglietti, maree, storia e visita | TouringBee</title>
-<meta name="description" content="Tutte le nostre guide di Mont-Saint-Michel in un posto — biglietti abbazia, orari, maree, come arrivare, storia e periodo migliore.">
+<title>Mont-Saint-Michel Guides: Tickets, Tides, History &amp; How to Visit | TouringBee</title>
+<meta name="description" content="All our Mont-Saint-Michel guides in one place — abbey tickets, opening hours, the tides, how to get there, history and the best time to visit.">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/favicon-180.png">
-<link rel="canonical" href="https://montsaintmichelguide.com/it/guides/">
+<link rel="canonical" href="https://montsaintmichelguide.com/guides/">
 <style>
 :root{--ink:#16202a;--muted:#5c6b78;--line:#e4ebf0;--brand:#2d9cdf;--brand-d:#15688f;--bg:#fff;--soft:#f2f8fc}
 *{box-sizing:border-box}
@@ -50,40 +50,40 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:36px 0;border-t
 </head>
 <body>
 <header class="top"><div class="wrap topbar">
-<a class="brand" href="/it/"><img src="/img/logo.webp" width="30" height="30" alt="Mont-Saint-Michel Guide logo"><span class="bt">Mont-Saint-Michel<span class="g">Guide</span></span></a>
+<a class="brand" href="/"><img src="/img/logo.webp" width="30" height="30" alt="Mont-Saint-Michel Guide logo"><span class="bt">Mont-Saint-Michel<span class="g">Guide</span></span></a>
 <div class="nav-wrap">
-<nav class="lang"><a href="/guides/">EN</a><a href="/fr/guides/">FR</a><a href="/de/guides/">DE</a><a href="/es/guides/">ES</a><a class="on" href="/it/guides/">IT</a><a href="/pt/guides/">PT</a><a href="/pl/guides/">PL</a><a href="/ru/guides/">RU</a></nav>
+<nav class="lang"><a href="/">EN</a><a href="/fr/">FR</a><a href="/de/">DE</a><a href="/es/">ES</a><a href="/it/">IT</a><a href="/pt/">PT</a><a href="/pl/">PL</a><a href="/ru/">RU</a></nav>
 </div>
 </div></header>
 
 <div class="ghead"><div class="wrap">
-<nav class="crumbs"><a href="/it/">Home</a> &rsaquo; Guide</nav>
-<h1>Guide di Mont-Saint-Michel</h1>
-<p>Tutto per pianificare la visita — biglietti, maree, storia e come arrivare. Nuove guide di frequente.</p>
+<nav class="crumbs"><a href="/">Home</a> &rsaquo; Guides</nav>
+<h1>Mont-Saint-Michel Guides</h1>
+<p>Everything you need to plan the visit — tickets, tides, history and how to get there. New guides added regularly.</p>
 </div></div>
 
 <main><div class="wrap">
-<div class="gcat">Pianificare &amp; biglietti</div>
+<div class="gcat">Planning &amp; tickets</div>
 <div class="gcards">
-<a class="gcard" href="/it/mont-saint-michel-abbey-tickets/">
+<a class="gcard" href="/mont-saint-michel-abbey-tickets/">
 <img src="/img/abbey-800.webp" alt="Mont-Saint-Michel abbey" loading="lazy">
-<div class="b"><h3>Biglietti abbazia: prezzi, orari e interni</h3><p>Prezzi 2026, orari, dove comprare e un percorso nell'abbazia sala per sala.</p></div>
+<div class="b"><h3>Abbey Tickets: Prices, Hours &amp; What's Inside</h3><p>2026 prices, opening hours, where to buy, and a room-by-room walk through the abbey.</p></div>
 </a>
-<span class="gcard soon"><img src="/img/hero-600.webp" alt="Mont-Saint-Michel across the bay" loading="lazy"><div class="b"><h3>Periodo migliore per visitare</h3><p>Stagioni, maree e le ore più tranquille.</p><span class="tag">Presto</span></div></span>
-<span class="gcard soon"><img src="/img/village-600.webp" alt="Road to Mont-Saint-Michel" loading="lazy"><div class="b"><h3>Come arrivare</h3><p>In auto, treno e da Parigi — gli itinerari pratici.</p><span class="tag">Presto</span></div></span>
+<span class="gcard soon"><img src="/img/hero-600.webp" alt="Mont-Saint-Michel across the bay" loading="lazy"><div class="b"><h3>Best Time to Visit</h3><p>Seasons, tides and the calmest hours of the day.</p><span class="tag">Coming soon</span></div></span>
+<span class="gcard soon"><img src="/img/village-600.webp" alt="Road to Mont-Saint-Michel" loading="lazy"><div class="b"><h3>How to Get There</h3><p>By car, train and from Paris — the practical routes.</p><span class="tag">Coming soon</span></div></span>
 </div>
 
-<div class="gcat">L'isola &amp; la sua storia</div>
+<div class="gcat">The island &amp; its story</div>
 <div class="gcards">
-<span class="gcard soon"><img src="/img/ramparts-800.webp" alt="Tides around Mont-Saint-Michel" loading="lazy"><div class="b"><h3>Le maree</h3><p>Quando il mare circonda l'abbazia e come osservarlo in sicurezza.</p><span class="tag">Presto</span></div></span>
-<span class="gcard soon"><img src="/img/prison-800.webp" alt="History of Mont-Saint-Michel" loading="lazy"><div class="b"><h3>La storia</h3><p>Dalla visione di un arcangelo ad abbazia, prigione e sito UNESCO.</p><span class="tag">Presto</span></div></span>
-<span class="gcard soon"><img src="/img/merveille-800.webp" alt="Architecture of Mont-Saint-Michel" loading="lazy"><div class="b"><h3>L'architettura spiegata</h3><p>La Merveille, il chiostro e come l'hanno costruita su una roccia.</p><span class="tag">Presto</span></div></span>
+<span class="gcard soon"><img src="/img/ramparts-800.webp" alt="Tides around Mont-Saint-Michel" loading="lazy"><div class="b"><h3>The Tides</h3><p>When the sea surrounds the abbey, and how to watch it safely.</p><span class="tag">Coming soon</span></div></span>
+<span class="gcard soon"><img src="/img/prison-800.webp" alt="History of Mont-Saint-Michel" loading="lazy"><div class="b"><h3>The History</h3><p>From an archangel's vision to abbey, prison and UNESCO site.</p><span class="tag">Coming soon</span></div></span>
+<span class="gcard soon"><img src="/img/merveille-800.webp" alt="Architecture of Mont-Saint-Michel" loading="lazy"><div class="b"><h3>Architecture, Explained</h3><p>La Merveille, the cloister and how they built it on a rock.</p><span class="tag">Coming soon</span></div></span>
 </div>
 </div></main>
 
 <footer><div class="wrap">
 <div class="fbrand">Mont-Saint-Michel<span>Guide</span></div>
-<p style="margin:10px 0 0">© 2026 Mont-Saint-Michel Guide · un progetto TouringBee · <a href="/it/">Home</a> · <a href="/privacy-policy.html">Privacy</a> · <a href="/affiliate-disclosure.html">Informativa sull'affiliazione</a></p>
+<p style="margin:10px 0 0">© 2026 Mont-Saint-Michel Guide · A TouringBee project · <a href="/">Home</a> · <a href="/privacy-policy.html">Privacy</a> · <a href="/affiliate-disclosure.html">Affiliate Disclosure</a></p>
 </div></footer>
 </body>
 </html>
