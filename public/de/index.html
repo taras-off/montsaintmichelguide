@@ -198,6 +198,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 .authorbox img{width:104px;height:104px;border-radius:50%;object-fit:cover;flex:0 0 auto;border:3px solid var(--soft)}
 @media(max-width:560px){.authorbox{flex-direction:column;align-items:center;text-align:center}}
 @media(max-width:640px){.dropdown{left:0;right:auto;max-width:calc(100vw - 40px)}}
+
+/* Bokun widget: keep injected cart out of document flow to avoid CLS */
+#bokun-widgets-root{position:fixed;top:0;left:0;width:0;height:0;overflow:visible;z-index:2147483000}
+.bokun-widgets-cart-wrapper{position:fixed;right:16px;bottom:16px;margin:0;z-index:2147483000}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
