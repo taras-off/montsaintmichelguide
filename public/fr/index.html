@@ -179,9 +179,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 .authorpic{width:104px;height:104px;border-radius:50%;object-fit:cover;float:left;margin:2px 20px 10px 0;border:3px solid var(--soft)}
 @media(max-width:640px){.dropdown{left:0;right:auto;max-width:calc(100vw - 40px)}}
 
-/* Bokun widget: keep injected cart out of document flow to avoid CLS */
-#bokun-widgets-root{position:fixed;top:0;left:0;width:0;height:0;overflow:visible;z-index:2147483000}
-.bokun-widgets-cart-wrapper{position:fixed;right:16px;bottom:16px;margin:0;z-index:2147483000}
+
+/* Bokun widget: take the injected root OUT of document flow (kills CLS) without touching the checkout modal. */
+#bokun-widgets-root{position:fixed!important;top:0!important;left:0!important;width:0!important;height:0!important;overflow:visible!important;z-index:2147483000!important}
+.bokun-widgets-cart-wrapper{position:fixed!important;top:auto!important;left:auto!important;right:16px!important;bottom:16px!important;margin:0!important;z-index:2147483000!important}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
