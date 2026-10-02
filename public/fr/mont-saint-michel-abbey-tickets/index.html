@@ -164,6 +164,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 @media(max-width:720px){.fcols{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.ahero h1{font-size:27px}.topbar{height:auto;flex-wrap:wrap;gap:4px;padding:8px 0}.lang a{padding:8px 7px}}
 @media(max-width:640px){.dropdown{left:0;right:auto;max-width:calc(100vw - 40px)}}
+
+/* Bokun widget: take injected root/cart OUT of document flow (kills CLS); modal untouched */
+#bokun-widgets-root{position:fixed!important;top:0!important;left:0!important;width:0!important;height:0!important;overflow:visible!important;z-index:2147483000!important}
+.bokun-widgets-cart-wrapper{position:fixed!important;top:auto!important;left:auto!important;right:16px!important;bottom:16px!important;margin:0!important;z-index:2147483000!important}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -191,6 +195,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <div class="nav-wrap">
 <details class="menu"><summary>Guides <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="dropdown">
+<a href="/fr/mont-saint-michel-and-saint-malo-one-day/">Le Mont &amp; Saint-Malo en un jour</a>
 <a href="/fr/mont-saint-michel-map/">Carte et meilleur itinéraire</a>
 <a href="/fr/mont-saint-michel-where-to-stay/">Où dormir : île ou continent</a>
 <a href="/fr/mont-saint-michel-from-paris-day-trip/">Mont-Saint-Michel depuis Paris (un jour)</a>
@@ -211,7 +216,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <div class="byline"><span>Par <b>Eugene</b></span><span>Mis à jour en <b>juillet 2026</b></span><span><b>7 minutes</b> de lecture</span></div>
 <div class="herobtns">
 <a class="btn" href="https://www.tiqets.com/mont-saint-michel-abbey-tickets-l145867/?partner=touringbee_limited-180893&tq_campaign=msmguide" target="_blank" rel="noopener sponsored">Acheter les billets</a>
-<a class="btn dark" href="https://touringbee.com/fr/product/mont-saint-michel-audioguide-fr/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=abbey_hero" target="_blank" rel="noopener sponsored">Acheter l'audioguide</a>
+<a class="btn dark bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=fr" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=fr" target="_blank" rel="noopener sponsored">Acheter l'audioguide</a>
 <a class="btn ghost" href="https://www.getyourguide.com/mont-saint-michel-l1805/?partner_id=0M4BUCG&utm_medium=travel_agent" target="_blank" rel="noopener sponsored">Réserver une visite guidée</a>
 </div>
 </div></div>
@@ -276,7 +281,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg> Fonctionne sur iOS et Android</li>
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> En autonomie, environ 2–3 heures</li>
 </ul>
-<a class="btn block" href="https://touringbee.com/fr/product/mont-saint-michel-audioguide-fr/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=abbey_prices" target="_blank" rel="noopener sponsored">Acheter l'audioguide — dès 9,99 €</a>
+<a class="btn block bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=fr" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=fr" target="_blank" rel="noopener sponsored">Acheter l'audioguide — dès 9,99 €</a>
 </div>
 </div>
 
@@ -296,7 +301,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <h2 id="island-vs-abbey">Balade sur l'île ou visite de l'abbaye</h2>
 <p>Les primo-visiteurs confondent souvent deux choses. La visite de l'abbaye, c'est le parcours payant à l'intérieur du monastère, en haut. La montée par le village — les portes, la Grande Rue, l'église Saint-Pierre, les remparts — est gratuite et distincte.</p>
-<p>Si vous voulez entendre les histoires du village pendant la montée, une formule en autonomie comme la balade audio de l'île TouringBee raconte le chemin du rivage jusqu'aux portes de l'abbaye sur une carte hors ligne, puis vous laisse visiter l'intérieur de l'abbaye avec votre propre billet. Voyez-y deux moitiés d'une même visite : l'itinéraire de l'île vous mène en haut avec du contexte, et le billet de l'abbaye vous fait entrer. Ils ne se recoupent pas, donc vous ne payez jamais deux fois la même chose. <a href="https://touringbee.com/fr/product/mont-saint-michel-audioguide-fr/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=abbey_island" target="_blank" rel="noopener sponsored">Voir l'audioguide de l'île &rarr;</a></p>
+<p>Si vous voulez entendre les histoires du village pendant la montée, une formule en autonomie comme la balade audio de l'île TouringBee raconte le chemin du rivage jusqu'aux portes de l'abbaye sur une carte hors ligne, puis vous laisse visiter l'intérieur de l'abbaye avec votre propre billet. Voyez-y deux moitiés d'une même visite : l'itinéraire de l'île vous mène en haut avec du contexte, et le billet de l'abbaye vous fait entrer. Ils ne se recoupent pas, donc vous ne payez jamais deux fois la même chose. <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=fr" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=fr" target="_blank" rel="noopener sponsored">Voir l'audioguide de l'île &rarr;</a></p>
 
 <h2 id="best-time">Le meilleur moment de la journée pour visiter</h2>
 <p>Montez à la première entrée du matin — l'heure la plus calme avant l'arrivée des cars — ou en fin de journée, quand les bus repartent et que la lumière sur la terrasse s'adoucit. Le milieu de journée en été est le créneau le plus chargé et le plus lent, à éviter. Pour la saisonnalité, voyez notre guide sur le <a href="/fr/best-time-to-visit-mont-saint-michel/">meilleur moment pour visiter</a>.</p>
@@ -347,7 +352,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 </div>
 <div class="tb-body">
 <a class="btn block" href="https://www.tiqets.com/mont-saint-michel-abbey-tickets-l145867/?partner=touringbee_limited-180893&tq_campaign=msmguide" target="_blank" rel="noopener sponsored">Réserver les billets sur Tiqets &rarr;</a>
-<a class="btn outline block" style="margin-top:10px" href="https://touringbee.com/fr/product/mont-saint-michel-audioguide-fr/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=abbey_conclusion" target="_blank" rel="noopener sponsored">Ajouter l'audioguide de l'île — dès 9,99 €</a>
+<a class="btn outline block bokunButton" style="margin-top:10px" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=fr" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=fr" target="_blank" rel="noopener sponsored">Ajouter l'audioguide de l'île — dès 9,99 €</a>
 </div>
 </div>
 
@@ -375,9 +380,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <!-- Sticky buy bar: appears after scroll -->
 <div class="stickybuy" id="stickybuy">
 <div class="p">Audioguide du Mont-Saint-Michel <small>· dès 9,99 € · hors ligne · en français</small></div>
-<a class="btn" href="https://touringbee.com/fr/product/mont-saint-michel-audioguide-fr/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=abbey_stickybar" target="_blank" rel="noopener sponsored">Acheter 9,99 €</a>
+<a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=fr" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=fr" target="_blank" rel="noopener sponsored">Acheter 9,99 €</a>
 </div>
 <script>(function(){var b=document.getElementById('stickybuy');if(!b)return;function s(){if(window.scrollY>700){b.classList.add('show')}else{b.classList.remove('show')}}window.addEventListener('scroll',s,{passive:true});s();})();</script>
 
+<script>/* Load Bokun engine only on first user interaction — never on page load (keeps CWV/Lighthouse fast) */(function(){var l=0;function b(){if(l)return;l=1;var s=document.createElement('script');s.async=true;s.src='https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=d0f139b1-7599-4d82-9b4b-5388a20fa191';document.body.appendChild(s);}['mouseover','touchstart','scroll','keydown','pointerdown'].forEach(function(e){window.addEventListener(e,b,{once:true,passive:true});});})();</script>
 </body>
 </html>

@@ -141,6 +141,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 @media(max-width:720px){.fcols{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.ahero h1{font-size:27px}.topbar{height:auto;flex-wrap:wrap;gap:4px;padding:8px 0}.lang a{padding:8px 7px}}
 @media(max-width:640px){.dropdown{left:0;right:auto;max-width:calc(100vw - 40px)}}
+
+/* Bokun widget: take injected root/cart OUT of document flow (kills CLS); modal untouched */
+#bokun-widgets-root{position:fixed!important;top:0!important;left:0!important;width:0!important;height:0!important;overflow:visible!important;z-index:2147483000!important}
+.bokun-widgets-cart-wrapper{position:fixed!important;top:auto!important;left:auto!important;right:16px!important;bottom:16px!important;margin:0!important;z-index:2147483000!important}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -167,6 +171,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <div class="nav-wrap">
 <details class="menu"><summary>Гиды <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="dropdown">
+<a href="/ru/mont-saint-michel-and-saint-malo-one-day/">Мон-Сен-Мишель и Сен-Мало за день</a>
 <a href="/ru/mont-saint-michel-map/">Карта и лучший маршрут</a>
 <a href="/ru/mont-saint-michel-where-to-stay/">Где остановиться: остров или материк</a>
 <a href="/ru/mont-saint-michel-from-paris-day-trip/">Мон-Сен-Мишель из Парижа (на день)</a>
@@ -186,7 +191,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <p class="sub">Приливы — то, из-за чего Мон-Сен-Мишель не похож ни на одно другое место во Франции, и то, из-за чего поездка окажется либо эффектной, либо разочаровывающей. Вот как читать их на 2026 год.</p>
 <div class="byline"><span>Автор: <b>Eugene</b></span><span>Обновлено <b>июль 2026</b></span><span><b>8 мин</b> чтения</span></div>
 <div class="herobtns">
-<a class="btn" href="https://touringbee.com/ru/product/mont-saint-michel-audioguide-of-the-island-ru/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=tides_hero" target="_blank" rel="noopener sponsored">Купить аудиогид</a>
+<a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=ru" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=ru" target="_blank" rel="noopener sponsored">Купить аудиогид</a>
 <a class="btn dark" href="https://www.getyourguide.com/mont-saint-michel-l1805/?partner_id=0M4BUCG&utm_medium=travel_agent" target="_blank" rel="noopener sponsored">Забронировать прогулку по бухте с гидом</a>
 <a class="btn ghost" href="https://www.tiqets.com/mont-saint-michel-abbey-tickets-l145867/?partner=touringbee_limited-180893&tq_campaign=msmguide" target="_blank" rel="noopener sponsored">Купить билет в аббатство</a>
 </div>
@@ -198,7 +203,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <p>Этот текст — для тех, кто хочет спланировать визит сам. Разберём, как работают приливы в бухте, что такое коэффициент прилива, как быстро возвращается вода, с каких точек смотреть, когда закрывают проход к скале и какие правила безопасности здесь действительно важны. К концу вы сможете выбрать нужный день и нужный час.</p>
 
-<p>Поскольку всё решает время, а окно бывает коротким, историю удобно взять с собой: самостоятельный <a href="https://touringbee.com/ru/product/mont-saint-michel-audioguide-of-the-island-ru/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=tides_intro" target="_blank" rel="noopener sponsored">аудиогид TouringBee по острову</a> начинается на плотине с рассказа о приливах ещё до подъёма и работает офлайн в вашем темпе. Ещё определяетесь с сезоном? Посмотрите наш разбор <a href="/ru/best-time-to-visit-mont-saint-michel/">лучшего времени для поездки</a>.</p>
+<p>Because the timing is everything and your window can be short, it helps to have the story with you: the self-guided <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=ru" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=ru" target="_blank" rel="noopener sponsored">TouringBee island audio tour</a> opens at the dam with the tides before you even climb up, and runs offline at your own pace. Still deciding on the season? See our guide to the <a href="/ru/best-time-to-visit-mont-saint-michel/">о лучшем времени для визита</a>.</p>
 
 <p>Ещё планируете всю поездку целиком? Начните с нашего <a href="/ru/">полного гида по Мон-Сен-Мишелю</a>, а потом возвращайтесь сюда за деталями про приливы.</p>
 
@@ -248,7 +253,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg> 8 языков, живой голос диктора</li>
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg> Работает на iOS и Android</li>
 </ul>
-<a class="btn block" href="https://touringbee.com/ru/product/mont-saint-michel-audioguide-of-the-island-ru/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=tides_card" target="_blank" rel="noopener sponsored">Купить аудиогид — от €9,99</a>
+<a class="btn block bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=ru" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=ru" target="_blank" rel="noopener sponsored">Купить аудиогид — от €9,99</a>
 </div>
 </div>
 <p>Пешеходный аудиогид TouringBee по острову начинается на плотине с рассказа о приливах ещё до подъёма — и к моменту, когда вы дойдёте до крепостной стены, картина складывается целиком. Офлайн-карта с GPS работает без интернета и показывает, где вы находитесь; запись вы включаете сами, подойдя к точке.</p>
@@ -365,7 +370,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <h2 id="conclusion">Итог</h2>
 <p>Приливы — ежедневное представление Мон-Сен-Мишеля. Несколько минут с таблицей решают, какое действие вы увидите. Хотите остров в воде — берите день с высоким коэффициентом и приходите на стену заранее. Хотите тишину и простор — берите часы вокруг малой воды. Но на песок без гида не выходите никогда.</p>
-<p>Сначала прочитайте воду — и дальше поездка сложится сама. А если хочется понимать, что происходит в бухте, а не просто смотреть, <a href="https://touringbee.com/ru/product/mont-saint-michel-audioguide-of-the-island-ru/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=tides_conclusion" target="_blank" rel="noopener sponsored">аудиогид TouringBee по острову</a> начинается на плотине с приливов и ведёт рассказ до самых дверей аббатства.</p>
+<p>Read the water first. The rest of the trip falls into place. And if you'd like to understand what's happening in the bay rather than just watch it, the <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=ru" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=ru" target="_blank" rel="noopener sponsored">аудиогид TouringBee по острову</a> begins at the dam with the tides and carries the story all the way to the abbey doors.</p>
 
 <p class="disclose">Некоторые ссылки на этой странице — партнёрские (GetYourGuide, Tiqets, TouringBee). Если вы бронируете по ним, мы можем получить небольшую комиссию — без наценки для вас. Это никогда не влияет на наши рекомендации. См. наш <a href="/affiliate-disclosure.html">Партнёрское раскрытие</a>.</p>
 
@@ -390,9 +395,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <div class="stickybuy" id="stickybuy">
 <div class="p">Аудиогид по Мон-Сен-Мишелю <small>· от €9,99 · офлайн · на русском</small></div>
-<a class="btn" href="https://touringbee.com/ru/product/mont-saint-michel-audioguide-of-the-island-ru/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=tides_stickybar" target="_blank" rel="noopener sponsored">Купить €9,99</a>
+<a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=ru" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=ru" target="_blank" rel="noopener sponsored">Купить €9,99</a>
 </div>
 <script>(function(){var b=document.getElementById('stickybuy');if(!b)return;function s(){if(window.scrollY>700){b.classList.add('show')}else{b.classList.remove('show')}}window.addEventListener('scroll',s,{passive:true});s();})();</script>
 
+<script>/* Load Bokun engine only on first user interaction — never on page load (keeps CWV/Lighthouse fast) */(function(){var l=0;function b(){if(l)return;l=1;var s=document.createElement('script');s.async=true;s.src='https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=d0f139b1-7599-4d82-9b4b-5388a20fa191';document.body.appendChild(s);}['mouseover','touchstart','scroll','keydown','pointerdown'].forEach(function(e){window.addEventListener(e,b,{once:true,passive:true});});})();</script>
 </body>
 </html>

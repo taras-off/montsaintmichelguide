@@ -141,6 +141,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 @media(max-width:720px){.fcols{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.ahero h1{font-size:27px}.topbar{height:auto;flex-wrap:wrap;gap:4px;padding:8px 0}.lang a{padding:8px 7px}}
 @media(max-width:640px){.dropdown{left:0;right:auto;max-width:calc(100vw - 40px)}}
+
+/* Bokun widget: take injected root/cart OUT of document flow (kills CLS); modal untouched */
+#bokun-widgets-root{position:fixed!important;top:0!important;left:0!important;width:0!important;height:0!important;overflow:visible!important;z-index:2147483000!important}
+.bokun-widgets-cart-wrapper{position:fixed!important;top:auto!important;left:auto!important;right:16px!important;bottom:16px!important;margin:0!important;z-index:2147483000!important}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -167,6 +171,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <div class="nav-wrap">
 <details class="menu"><summary>Przewodniki <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="dropdown">
+<a href="/pl/mont-saint-michel-and-saint-malo-one-day/">Mont i Saint-Malo w jeden dzień</a>
 <a href="/pl/mont-saint-michel-map/">Mapa i najlepsza trasa</a>
 <a href="/pl/mont-saint-michel-where-to-stay/">Gdzie spać: wyspa czy ląd</a>
 <a href="/pl/mont-saint-michel-from-paris-day-trip/">Mont-Saint-Michel z Paryża (jeden dzień)</a>
@@ -186,7 +191,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <p class="sub">Pływy to właśnie to, co czyni Mont-Saint-Michel wyjątkowym we Francji — i to, co decyduje, czy wizyta będzie spektakularna, czy nijaka. Oto jak je czytać na 2026 rok.</p>
 <div class="byline"><span>Autor: <b>Eugene</b></span><span>Aktualizacja: <b>lipiec 2026</b></span><span><b>8 min</b> czytania</span></div>
 <div class="herobtns">
-<a class="btn" href="https://touringbee.com/pl/product/mont-saint-michel-audioguide-pl/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=tides_hero" target="_blank" rel="noopener sponsored">Kup audioprzewodnik</a>
+<a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=pl" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=pl" target="_blank" rel="noopener sponsored">Kup audioprzewodnik</a>
 <a class="btn dark" href="https://www.getyourguide.com/mont-saint-michel-l1805/?partner_id=0M4BUCG&utm_medium=travel_agent" target="_blank" rel="noopener sponsored">Zarezerwuj spacer po zatoce z przewodnikiem</a>
 <a class="btn ghost" href="https://www.tiqets.com/mont-saint-michel-abbey-tickets-l145867/?partner=touringbee_limited-180893&tq_campaign=msmguide" target="_blank" rel="noopener sponsored">Kup bilet do opactwa</a>
 </div>
@@ -198,7 +203,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <p>Ten przewodnik jest dla tych, którzy planują wizytę sami. Omówimy, jak działają pływy w zatoce, czym jest współczynnik pływu, jak szybko wraca woda, skąd patrzeć, kiedy zamyka się dostęp do skały i które zasady bezpieczeństwa naprawdę tu liczą. Na koniec będziesz umiał wybrać właściwy dzień i właściwą godzinę.</p>
 
-<p>Ponieważ wszystko zależy od momentu, a okno bywa krótkie, warto mieć historię przy sobie: samodzielny <a href="https://touringbee.com/pl/product/mont-saint-michel-audioguide-pl/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=tides_intro" target="_blank" rel="noopener sponsored">audioprzewodnik TouringBee po wyspie</a> zaczyna się przy tamie od opowieści o pływach, jeszcze przed wejściem na górę, i działa offline w twoim tempie. Wciąż wahasz się co do sezonu? Zobacz naszą analizę <a href="/pl/best-time-to-visit-mont-saint-michel/">najlepszego czasu na wizytę</a>.</p>
+<p>Because the timing is everything and your window can be short, it helps to have the story with you: the self-guided <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=pl" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=pl" target="_blank" rel="noopener sponsored">TouringBee island audio tour</a> opens at the dam with the tides before you even climb up, and runs offline at your own pace. Still deciding on the season? See our guide to the <a href="/pl/best-time-to-visit-mont-saint-michel/">najlepszej porze na wizytę</a>.</p>
 
 <p>Wciąż planujesz całą wyprawę? Zacznij od naszego <a href="/pl/">kompletnego przewodnika po Mont-Saint-Michel</a>, a potem wróć tu po szczegóły dotyczące pływów.</p>
 
@@ -248,7 +253,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg> 8 języków, narracja prawdziwym głosem</li>
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg> Działa na iOS i Android</li>
 </ul>
-<a class="btn block" href="https://touringbee.com/pl/product/mont-saint-michel-audioguide-pl/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=tides_card" target="_blank" rel="noopener sponsored">Kup audioprzewodnik — od 9,99 €</a>
+<a class="btn block bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=pl" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=pl" target="_blank" rel="noopener sponsored">Kup audioprzewodnik — od 9,99 €</a>
 </div>
 </div>
 <p>Audioprzewodnik TouringBee po wyspie zaczyna się przy tamie od historii pływów, jeszcze przed wejściem na górę — tak że gdy docierasz na mury, cały obraz jest już złożony. Mapa GPS offline działa bez internetu i pokazuje, gdzie jesteś; każdą ścieżkę uruchamiasz sam, docierając na miejsce.</p>
@@ -365,7 +370,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <h2 id="conclusion">Podsumowanie</h2>
 <p>Pływy to codzienne przedstawienie Mont-Saint-Michel. Kilka minut z tabelą decyduje, który akt zobaczysz. Chcesz wyspę w wodzie — weź dzień o wysokim współczynniku i przyjdź wcześnie na mur. Chcesz ciszy i przestrzeni — weź godziny wokół odpływu. Ale nigdy nie wychodź na piasek bez przewodnika.</p>
-<p>Najpierw przeczytaj wodę, a reszta wyjazdu ułoży się sama. A jeśli chcesz rozumieć, co dzieje się w zatoce, a nie tylko patrzeć, <a href="https://touringbee.com/pl/product/mont-saint-michel-audioguide-pl/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=tides_conclusion" target="_blank" rel="noopener sponsored">audioprzewodnik TouringBee po wyspie</a> zaczyna się przy tamie od pływów i prowadzi opowieść aż do drzwi opactwa.</p>
+<p>Read the water first. The rest of the trip falls into place. And if you'd like to understand what's happening in the bay rather than just watch it, the <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=pl" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=pl" target="_blank" rel="noopener sponsored">audioprzewodnik po wyspie TouringBee</a> begins at the dam with the tides and carries the story all the way to the abbey doors.</p>
 
 <p class="disclose">Niektóre linki na tej stronie to linki afiliacyjne (GetYourGuide, Tiqets, TouringBee). Jeśli zarezerwujesz przez nie, możemy otrzymać niewielką prowizję — bez dodatkowych kosztów dla ciebie. Nigdy nie wpływa to na nasze rekomendacje. Zobacz nasze <a href="/affiliate-disclosure.html">informacje o afiliacji</a>.</p>
 
@@ -390,9 +395,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <div class="stickybuy" id="stickybuy">
 <div class="p">Audioprzewodnik po Mont-Saint-Michel <small>· od 9,99 € · offline · po polsku</small></div>
-<a class="btn" href="https://touringbee.com/pl/product/mont-saint-michel-audioguide-pl/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=tides_stickybar" target="_blank" rel="noopener sponsored">Kup 9,99 €</a>
+<a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=pl" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=pl" target="_blank" rel="noopener sponsored">Kup 9,99 €</a>
 </div>
 <script>(function(){var b=document.getElementById('stickybuy');if(!b)return;function s(){if(window.scrollY>700){b.classList.add('show')}else{b.classList.remove('show')}}window.addEventListener('scroll',s,{passive:true});s();})();</script>
 
+<script>/* Load Bokun engine only on first user interaction — never on page load (keeps CWV/Lighthouse fast) */(function(){var l=0;function b(){if(l)return;l=1;var s=document.createElement('script');s.async=true;s.src='https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=d0f139b1-7599-4d82-9b4b-5388a20fa191';document.body.appendChild(s);}['mouseover','touchstart','scroll','keydown','pointerdown'].forEach(function(e){window.addEventListener(e,b,{once:true,passive:true});});})();</script>
 </body>
 </html>

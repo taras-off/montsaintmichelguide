@@ -141,6 +141,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 @media(max-width:720px){.fcols{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.ahero h1{font-size:27px}.topbar{height:auto;flex-wrap:wrap;gap:4px;padding:8px 0}.lang a{padding:8px 7px}}
 @media(max-width:640px){.dropdown{left:0;right:auto;max-width:calc(100vw - 40px)}}
+
+/* Bokun widget: take injected root/cart OUT of document flow (kills CLS); modal untouched */
+#bokun-widgets-root{position:fixed!important;top:0!important;left:0!important;width:0!important;height:0!important;overflow:visible!important;z-index:2147483000!important}
+.bokun-widgets-cart-wrapper{position:fixed!important;top:auto!important;left:auto!important;right:16px!important;bottom:16px!important;margin:0!important;z-index:2147483000!important}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -167,6 +171,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <div class="nav-wrap">
 <details class="menu"><summary>Guide <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="dropdown">
+<a href="/it/mont-saint-michel-and-saint-malo-one-day/">Il Mont &amp; Saint-Malo in un giorno</a>
 <a href="/it/mont-saint-michel-map/">Mappa e miglior percorso</a>
 <a href="/it/mont-saint-michel-where-to-stay/">Dove dormire: isola o terraferma</a>
 <a href="/it/mont-saint-michel-from-paris-day-trip/">Mont-Saint-Michel da Parigi (in giornata)</a>
@@ -186,7 +191,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <p class="sub">Sì, si fa in un giorno, ma sarà lungo, e il modo in cui viaggi cambia quasi tutto. Ecco gli orari reali del 2026, i costi e un verdetto onesto.</p>
 <div class="byline"><span>Di <b>Eugene</b></span><span>Aggiornato a <b>luglio 2026</b></span><span><b>8 min</b> di lettura</span></div>
 <div class="herobtns">
-<a class="btn" href="https://touringbee.com/product/mont-saint-michel-audioguide-it/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=paris_hero" target="_blank" rel="noopener sponsored">Acquista l'audioguida</a>
+<a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=it" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=it" target="_blank" rel="noopener sponsored">Acquista l'audioguida</a>
 <a class="btn dark" href="https://www.getyourguide.com/mont-saint-michel-l1805/?partner_id=0M4BUCG&utm_medium=travel_agent" target="_blank" rel="noopener sponsored">Prenota una gita da Parigi</a>
 <a class="btn ghost" href="https://www.tiqets.com/mont-saint-michel-abbey-tickets-l145867/?partner=touringbee_limited-180893&tq_campaign=msmguide" target="_blank" rel="noopener sponsored">Acquista un biglietto per l'abbazia</a>
 </div>
@@ -198,7 +203,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <p>Ogni anno circa tre milioni di persone visitano Mont-Saint-Michel, e la maggior parte arriva nella stessa fascia ristretta, tra tarda mattina e primo pomeriggio. La tua impressione dipende quindi non solo dal mezzo scelto, ma dall'ora di arrivo. Pianifica bene il percorso e vedrai un'isola completamente diversa.</p>
 
-<p>Questa guida è per chi è indeciso tra treno, tour organizzato e auto, e deve capire se basta un giorno o se è meglio dormire lì. E poiché le tue ore sulla roccia sono poche, mostriamo anche dove conviene un'<a href="https://touringbee.com/product/mont-saint-michel-audioguide-it/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=paris_intro" target="_blank" rel="noopener sponsored">audioguida TouringBee dell'isola</a> in autonomia, che puoi avviare già in treno e usare offline al tuo ritmo.</p>
+<p>This guide is for anyone choosing between the train, an organised tour and a car — and deciding whether one day is enough or a night is better. And because your hours on the rock are few, we'll also show where a self-guided <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=it" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=it" target="_blank" rel="noopener sponsored">TouringBee audio tour of the island</a> — one you can start on the train and run offline at your own pace — earns its keep.</p>
 
 <p>Qui sotto: orari reali dei bus 2026 al minuto, come ottenere il biglietto per l'abbazia, cosa fare in poche ore, dove mangiare e quanto costa tutto, più un verdetto onesto dai nostri viaggi su quando una notte batte la corsa di un giorno. Se ti interessa solo il trasporto, vedi la nostra guida dedicata: <a href="/it/how-to-get-to-mont-saint-michel/">come arrivare a Mont-Saint-Michel</a>.</p>
 
@@ -276,7 +281,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <h2 id="fit">Cosa fare in poche ore</h2>
 <p>Con 4–6 ore sull'isola, sii spietato. Entra dalla Porta del Re, ma non salire dritto per la Grande Rue affollata: devia sui bastioni o su una scala laterale. Portano all'abbazia altrettanto bene, con molte meno persone e una vista migliore.</p>
 <p>Poi: l'abbazia con il tuo biglietto a orario, una passeggiata sui bastioni e sulla Torre Nord, il cimitero silenzioso, uno spuntino veloce. Lascia i musei a una visita più lunga.</p>
-<p>Proprio perché le ore sono poche, l'audioguida si ripaga. L'<a href="https://touringbee.com/product/mont-saint-michel-audioguide-it/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=paris_body" target="_blank" rel="noopener sponsored">audioguida TouringBee dell'isola</a> va al tuo ritmo, senza gruppo e senza orari fissi. Funziona offline: una mappa GPS mostra dove sei, e ogni traccia la avvii tu arrivando sul posto.</p>
+<p>Precisely because your hours are few, an audio guide pays for itself. The <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=it" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=it" target="_blank" rel="noopener sponsored">TouringBee island audio tour</a> moves at your pace, with no group and no fixed schedule. It works offline: a GPS map shows where you are, and you start each track yourself as you reach the spot.</p>
 
 <h2 id="tight">Se il tempo è davvero poco</h2>
 <p>In un viaggio breve, non provare a vedere tutto in una volta.</p>
@@ -358,7 +363,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg> 8 lingue, narrazione con voce reale</li>
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg> Funziona su iOS e Android</li>
 </ul>
-<a class="btn block" href="https://touringbee.com/product/mont-saint-michel-audioguide-it/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=paris_card" target="_blank" rel="noopener sponsored">Acquista l'audioguida — da 9,99 €</a>
+<a class="btn block bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=it" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=it" target="_blank" rel="noopener sponsored">Acquista l'audioguida — da 9,99 €</a>
 </div>
 </div>
 <p>Con solo poche ore sulla roccia, è il contesto a renderle preziose. L'audioguida TouringBee dell'isola ti porta dalla riva alle porte dell'abbazia: una mappa offline mostra dove sei, e ogni traccia la avvii tu arrivando. Niente internet, più lingue, al tuo ritmo. Consiglio: scaricala in treno, vicino all'isola non c'è Wi-Fi e il segnale è debole.</p>
@@ -400,7 +405,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <h2 id="conclusion">In sintesi</h2>
 <p>Una gita in giornata da Parigi funziona. Prendi la prima corsa, prenota l'abbazia a orario fisso, aggira la calca della Grande Rue passando dai bastioni e tieni a mente il bus di ritorno. Così camminerai sulle mura di uno dei grandi luoghi di Francia e dormirai comunque a Parigi.</p>
 <p>Ma se ti importano le foto e il silenzio, regala a Mont-Saint-Michel una notte. Dopo le sei di sera diventa un luogo che la maggior parte dei visitatori in giornata non vede mai.</p>
-<p>In ogni caso, l'isola premia chi arriva con un piano. Avvia l'<a href="https://touringbee.com/product/mont-saint-michel-audioguide-it/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=paris_conclusion" target="_blank" rel="noopener sponsored">audioguida TouringBee</a> già in treno, e quando raggiungi il centro visitatori sarai pronto a sfruttare ognuna delle tue poche ore.</p>
+<p>Either way, the island rewards those who arrive with a plan. Start the <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=it" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=it" target="_blank" rel="noopener sponsored">TouringBee audio tour</a> on the train, and by the time you reach the visitor centre you'll be ready to use every one of your few hours.</p>
 
 <p class="disclose">Alcuni link in questa pagina sono link di affiliazione (SNCF, GetYourGuide, Tiqets, Booking.com, TouringBee). Se prenoti tramite essi, potremmo ricevere una piccola commissione, senza costi aggiuntivi per te. Non influenza mai ciò che consigliamo. Vedi la nostra <a href="/affiliate-disclosure.html">informativa sull'affiliazione</a>.</p>
 
@@ -425,9 +430,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <div class="stickybuy" id="stickybuy">
 <div class="p">Audioguida di Mont-Saint-Michel <small>· da 9,99 € · offline · in italiano</small></div>
-<a class="btn" href="https://touringbee.com/product/mont-saint-michel-audioguide-it/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=paris_stickybar" target="_blank" rel="noopener sponsored">Acquista 9,99 €</a>
+<a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=it" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=it" target="_blank" rel="noopener sponsored">Acquista 9,99 €</a>
 </div>
 <script>(function(){var b=document.getElementById('stickybuy');if(!b)return;function s(){if(window.scrollY>700){b.classList.add('show')}else{b.classList.remove('show')}}window.addEventListener('scroll',s,{passive:true});s();})();</script>
 
+<script>/* Load Bokun engine only on first user interaction — never on page load (keeps CWV/Lighthouse fast) */(function(){var l=0;function b(){if(l)return;l=1;var s=document.createElement('script');s.async=true;s.src='https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=d0f139b1-7599-4d82-9b4b-5388a20fa191';document.body.appendChild(s);}['mouseover','touchstart','scroll','keydown','pointerdown'].forEach(function(e){window.addEventListener(e,b,{once:true,passive:true});});})();</script>
 </body>
 </html>

@@ -164,6 +164,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 @media(max-width:720px){.fcols{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.ahero h1{font-size:27px}.topbar{height:auto;flex-wrap:wrap;gap:4px;padding:8px 0}.lang a{padding:8px 7px}}
 @media(max-width:640px){.dropdown{left:0;right:auto;max-width:calc(100vw - 40px)}}
+
+/* Bokun widget: take injected root/cart OUT of document flow (kills CLS); modal untouched */
+#bokun-widgets-root{position:fixed!important;top:0!important;left:0!important;width:0!important;height:0!important;overflow:visible!important;z-index:2147483000!important}
+.bokun-widgets-cart-wrapper{position:fixed!important;top:auto!important;left:auto!important;right:16px!important;bottom:16px!important;margin:0!important;z-index:2147483000!important}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -191,6 +195,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <div class="nav-wrap">
 <details class="menu"><summary>Guides <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="dropdown">
+<a href="/mont-saint-michel-and-saint-malo-one-day/">MSM &amp; Saint-Malo in one day</a>
 <a href="/mont-saint-michel-map/">Map &amp; best walking route</a>
 <a href="/mont-saint-michel-where-to-stay/">Where to stay: island vs mainland</a>
 <a href="/mont-saint-michel-from-paris-day-trip/">Mont-Saint-Michel from Paris (day trip)</a>
@@ -211,7 +216,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <div class="byline"><span>By <b>Eugene</b></span><span>Updated <b>July 2026</b></span><span><b>7-minute</b> read</span></div>
 <div class="herobtns">
 <a class="btn" href="https://www.tiqets.com/mont-saint-michel-abbey-tickets-l145867/?partner=touringbee_limited-180893&tq_campaign=msmguide" target="_blank" rel="noopener sponsored">Buy abbey tickets</a>
-<a class="btn dark" href="https://touringbee.com/product/mont-saint-michel-audioguide/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=abbey_hero" target="_blank" rel="noopener sponsored">Buy the audio guide</a>
+<a class="btn dark bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1" target="_blank" rel="noopener sponsored">Buy the audio guide</a>
 <a class="btn ghost" href="https://www.getyourguide.com/mont-saint-michel-l1805/?partner_id=0M4BUCG&utm_medium=travel_agent" target="_blank" rel="noopener sponsored">Book a guided tour</a>
 </div>
 </div></div>
@@ -276,7 +281,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg> Works on iOS &amp; Android</li>
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Self-guided, around 2–3 hours</li>
 </ul>
-<a class="btn block" href="https://touringbee.com/product/mont-saint-michel-audioguide/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=abbey_prices" target="_blank" rel="noopener sponsored">Buy the Audio Guide — from &euro;9.99</a>
+<a class="btn block bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1" target="_blank" rel="noopener sponsored">Buy the Audio Guide — from &euro;9.99</a>
 </div>
 </div>
 
@@ -296,7 +301,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <h2 id="island-vs-abbey">Island walk vs abbey visit</h2>
 <p>First-timers often mix up two different things. The abbey visit is the paid route inside the monastery at the top. The climb through the village — the gates, the Grande Rue, the church of Saint-Pierre, the ramparts — is free and separate.</p>
-<p>If you want to hear the village's own stories on the way up, a self-guided format like TouringBee's island audio walk narrates the path from the shore to the abbey doors on an offline map, then leaves you to tour the abbey interior on your own ticket. Think of it as two halves of one visit: the island route brings you up with context, and the abbey ticket takes you inside. They don't overlap, so you never pay twice for the same thing. <a href="https://touringbee.com/product/mont-saint-michel-audioguide/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=abbey_island" target="_blank" rel="noopener sponsored">See the island audio guide &rarr;</a></p>
+<p>If you want to hear the village's own stories on the way up, a self-guided format like TouringBee's island audio walk narrates the path from the shore to the abbey doors on an offline map, then leaves you to tour the abbey interior on your own ticket. Think of it as two halves of one visit: the island route brings you up with context, and the abbey ticket takes you inside. They don't overlap, so you never pay twice for the same thing. <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1" target="_blank" rel="noopener sponsored">See the island audio guide &rarr;</a></p>
 
 <h2 id="best-time">Best time of day to visit</h2>
 <p>Go up for the first entry in the morning — the quietest hour before the day-trip coaches arrive — or late in the day, when the buses leave and the light on the terrace softens. Midday in summer is the busiest, slowest window, best avoided. For the seasonal picture, see our guide to the <a href="/best-time-to-visit-mont-saint-michel/">best time to visit</a>.</p>
@@ -347,7 +352,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 </div>
 <div class="tb-body">
 <a class="btn block" href="https://www.tiqets.com/mont-saint-michel-abbey-tickets-l145867/?partner=touringbee_limited-180893&tq_campaign=msmguide" target="_blank" rel="noopener sponsored">Book abbey tickets on Tiqets &rarr;</a>
-<a class="btn outline block" style="margin-top:10px" href="https://touringbee.com/product/mont-saint-michel-audioguide/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=abbey_conclusion" target="_blank" rel="noopener sponsored">Add the island audio guide — from &euro;9.99</a>
+<a class="btn outline block bokunButton" style="margin-top:10px" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1" target="_blank" rel="noopener sponsored">Add the island audio guide — from &euro;9.99</a>
 </div>
 </div>
 
@@ -375,9 +380,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <!-- Sticky buy bar: appears after scroll -->
 <div class="stickybuy" id="stickybuy">
 <div class="p">Mont-Saint-Michel Audio Guide <small>· from &euro;9.99 · offline · in English</small></div>
-<a class="btn" href="https://touringbee.com/product/mont-saint-michel-audioguide/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=abbey_stickybar" target="_blank" rel="noopener sponsored">Buy &euro;9.99</a>
+<a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1" target="_blank" rel="noopener sponsored">Buy &euro;9.99</a>
 </div>
 <script>(function(){var b=document.getElementById('stickybuy');if(!b)return;function s(){if(window.scrollY>700){b.classList.add('show')}else{b.classList.remove('show')}}window.addEventListener('scroll',s,{passive:true});s();})();</script>
 
+<script>/* Load Bokun engine only on first user interaction — never on page load (keeps CWV/Lighthouse fast) */(function(){var l=0;function b(){if(l)return;l=1;var s=document.createElement('script');s.async=true;s.src='https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=d0f139b1-7599-4d82-9b4b-5388a20fa191';document.body.appendChild(s);}['mouseover','touchstart','scroll','keydown','pointerdown'].forEach(function(e){window.addEventListener(e,b,{once:true,passive:true});});})();</script>
 </body>
 </html>

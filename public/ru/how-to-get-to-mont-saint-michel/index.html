@@ -141,6 +141,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 @media(max-width:720px){.fcols{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.ahero h1{font-size:27px}.topbar{height:auto;flex-wrap:wrap;gap:4px;padding:8px 0}.lang a{padding:8px 7px}}
 @media(max-width:640px){.dropdown{left:0;right:auto;max-width:calc(100vw - 40px)}}
+
+/* Bokun widget: take injected root/cart OUT of document flow (kills CLS); modal untouched */
+#bokun-widgets-root{position:fixed!important;top:0!important;left:0!important;width:0!important;height:0!important;overflow:visible!important;z-index:2147483000!important}
+.bokun-widgets-cart-wrapper{position:fixed!important;top:auto!important;left:auto!important;right:16px!important;bottom:16px!important;margin:0!important;z-index:2147483000!important}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -167,6 +171,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <div class="nav-wrap">
 <details class="menu"><summary>Гиды <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="dropdown">
+<a href="/ru/mont-saint-michel-and-saint-malo-one-day/">Мон-Сен-Мишель и Сен-Мало за день</a>
 <a href="/ru/mont-saint-michel-map/">Карта и лучший маршрут</a>
 <a href="/ru/mont-saint-michel-where-to-stay/">Где остановиться: остров или материк</a>
 <a href="/ru/mont-saint-michel-from-paris-day-trip/">Мон-Сен-Мишель из Парижа (на день)</a>
@@ -186,7 +191,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <p class="sub">Мон-Сен-Мишель стоит в заливе на границе Нормандии и Бретани, вдали от крупных городов — но добраться проще, чем кажется. Вот все маршруты, с ценами и временем в пути на 2026 год.</p>
 <div class="byline"><span>Автор: <b>Eugene</b></span><span>Обновлено <b>июль 2026</b></span><span><b>6 минут</b> чтения</span></div>
 <div class="herobtns">
-<a class="btn" href="https://touringbee.com/ru/product/mont-saint-michel-audioguide-of-the-island-ru/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=transport_hero" target="_blank" rel="noopener sponsored">Купить аудиогид</a>
+<a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=ru" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=ru" target="_blank" rel="noopener sponsored">Купить аудиогид</a>
 <a class="btn dark" href="https://www.getyourguide.com/mont-saint-michel-l1805/?partner_id=0M4BUCG&utm_medium=travel_agent" target="_blank" rel="noopener sponsored">Экскурсия на день из Парижа</a>
 <a class="btn ghost" href="https://www.booking.com/cars/index.html?aid=1437498" target="_blank" rel="noopener sponsored">Аренда авто</a>
 </div>
@@ -196,7 +201,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <p class="lead">Мон-Сен-Мишель стоит в заливе на границе Нормандии и Бретани, вдали от крупных городов, — и добраться до него можно несколькими способами. Хорошая новость: почти при любом варианте последний отрезок пути одинаковый — бесплатный шаттл от материковой парковки до самого острова. Этот гид разложит по полочкам, как доехать из Парижа и из региона, сколько это стоит и сколько занимает времени.</p>
 
-<p>Мы пройдёмся по разным видам транспорта — поезду, автобусу через Ренн, поездке на машине и финальному шаттлу «Ле Пассёр». В конце вы поймёте, какой вариант удобнее именно вам, и не потеряете время на очереди и пересадки. А на прогулке от берега до дверей аббатства наш <a href="https://touringbee.com/ru/product/mont-saint-michel-audioguide-of-the-island-ru/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=transport_intro" target="_blank" rel="noopener sponsored">самостоятельный аудиогид</a> расскажет истории в вашем темпе — скачайте его перед выездом.</p>
+<p>Мы пройдёмся по разным видам транспорта — поезду, автобусу через Ренн, поездке на машине и финальному шаттлу «Ле Пассёр». В конце вы поймёте, какой вариант удобнее именно вам, и не потеряете время на очереди и пересадки. А на прогулке от берега до дверей аббатства наш <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=ru" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=ru" target="_blank" rel="noopener sponsored">самостоятельный аудиогид</a> расскажет истории в вашем темпе — скачайте его перед выездом.</p>
 
 <p>Планируете поездку целиком? Начните с нашего <a href="/ru/">полного гида по Мон-Сен-Мишелю</a>, а сюда возвращайтесь за деталями по дороге.</p>
 
@@ -290,7 +295,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <li>любите спокойные прогулки;</li>
 <li>приехали в хорошую погоду.</li>
 </ul>
-<p>Многие путешественники идут к острову пешком, а обратно возвращаются на шаттле. Так вы насладитесь панорамами и не устанете в конце дня. В любом случае вы можете послушать наш <a href="https://touringbee.com/ru/product/mont-saint-michel-audioguide-of-the-island-ru/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=transport_walk" target="_blank" rel="noopener sponsored">самостоятельный аудиогид</a>, который расскажет истории уже по дороге к скале.</p>
+<p>Многие путешественники идут к острову пешком, а обратно возвращаются на шаттле. Так вы насладитесь панорамами и не устанете в конце дня. В любом случае вы можете послушать наш <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=ru" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=ru" target="_blank" rel="noopener sponsored">самостоятельный аудиогид</a>, который расскажет истории уже по дороге к скале.</p>
 <p><strong>Совет TouringBee:</strong> если позволяет погода, хотя бы один путь пройдите пешком. Именно с дамбы открываются самые красивые виды на Мон-Сен-Мишель — их не увидеть из окна шаттла. Обратно всегда можно вернуться на бесплатном Le Passeur.</p>
 
 <h2 id="time">Сколько времени закладывать на дорогу</h2>
@@ -310,7 +315,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg> 8 языков, живой голос диктора</li>
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg> Работает на iOS и Android</li>
 </ul>
-<a class="btn block" href="https://touringbee.com/ru/product/mont-saint-michel-audioguide-of-the-island-ru/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=transport_card" target="_blank" rel="noopener sponsored">Купить аудиогид — от €9,99</a>
+<a class="btn block bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=ru" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=ru" target="_blank" rel="noopener sponsored">Купить аудиогид — от €9,99</a>
 </div>
 </div>
 <p>Когда вы наконец дойдёте до ворот, приятно уже знать, на что смотреть. Аудиогид TouringBee по Мон-Сен-Мишелю проведёт вас от берега до дверей аббатства: офлайн-карта показывает, где вы находитесь, а запись у каждой точки вы включаете сами, подойдя к месту. Интернет не нужен, есть несколько языков, идти можно в своём темпе. Совет: скачайте его в поезде или в машине — на старте нет Wi-Fi и слабый мобильный сигнал.</p>
@@ -352,7 +357,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <h2 id="conclusion">Итог</h2>
 <p>Дорога до Мон-Сен-Мишеля кажется сложной только на бумаге. На деле выбор простой: прямой поезд из Парижа, если он ходит в ваши даты; маршрут через Ренн — в остальное время; или машина, если совмещаете с другими точками региона. А финальный отрезок всегда один и тот же — бесплатный шаттл или короткая прогулка по дамбе к скале.</p>
-<p>Чтобы подъезд к острову пришёл уже со своими историями, возьмите с собой <a href="https://touringbee.com/ru/product/mont-saint-michel-audioguide-of-the-island-ru/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=transport_conclusion" target="_blank" rel="noopener sponsored">аудиогид TouringBee по острову</a> — он наполнит прогулку рассказом в вашем темпе.</p>
+<p>Чтобы подъезд к острову пришёл уже со своими историями, возьмите с собой <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=ru" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=ru" target="_blank" rel="noopener sponsored">аудиогид TouringBee по острову</a> — он наполнит прогулку рассказом в вашем темпе.</p>
 
 <p class="disclose">Некоторые ссылки на этой странице — партнёрские (SNCF, Booking.com, GetYourGuide, Tiqets, TouringBee). Если вы бронируете по ним, мы можем получить небольшую комиссию — без доплаты для вас. На наши рекомендации это не влияет. См. наше <a href="/affiliate-disclosure.html">Партнёрское раскрытие</a>.</p>
 
@@ -377,9 +382,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <div class="stickybuy" id="stickybuy">
 <div class="p">Аудиогид по Мон-Сен-Мишелю <small>· от €9,99 · офлайн · на русском</small></div>
-<a class="btn" href="https://touringbee.com/ru/product/mont-saint-michel-audioguide-of-the-island-ru/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=transport_stickybar" target="_blank" rel="noopener sponsored">Купить €9,99</a>
+<a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=ru" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=ru" target="_blank" rel="noopener sponsored">Купить €9,99</a>
 </div>
 <script>(function(){var b=document.getElementById('stickybuy');if(!b)return;function s(){if(window.scrollY>700){b.classList.add('show')}else{b.classList.remove('show')}}window.addEventListener('scroll',s,{passive:true});s();})();</script>
 
+<script>/* Load Bokun engine only on first user interaction — never on page load (keeps CWV/Lighthouse fast) */(function(){var l=0;function b(){if(l)return;l=1;var s=document.createElement('script');s.async=true;s.src='https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=d0f139b1-7599-4d82-9b4b-5388a20fa191';document.body.appendChild(s);}['mouseover','touchstart','scroll','keydown','pointerdown'].forEach(function(e){window.addEventListener(e,b,{once:true,passive:true});});})();</script>
 </body>
 </html>

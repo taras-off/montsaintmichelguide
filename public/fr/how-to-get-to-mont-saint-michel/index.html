@@ -141,6 +141,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 @media(max-width:720px){.fcols{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.ahero h1{font-size:27px}.topbar{height:auto;flex-wrap:wrap;gap:4px;padding:8px 0}.lang a{padding:8px 7px}}
 @media(max-width:640px){.dropdown{left:0;right:auto;max-width:calc(100vw - 40px)}}
+
+/* Bokun widget: take injected root/cart OUT of document flow (kills CLS); modal untouched */
+#bokun-widgets-root{position:fixed!important;top:0!important;left:0!important;width:0!important;height:0!important;overflow:visible!important;z-index:2147483000!important}
+.bokun-widgets-cart-wrapper{position:fixed!important;top:auto!important;left:auto!important;right:16px!important;bottom:16px!important;margin:0!important;z-index:2147483000!important}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -167,6 +171,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <div class="nav-wrap">
 <details class="menu"><summary>Guides <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="dropdown">
+<a href="/fr/mont-saint-michel-and-saint-malo-one-day/">Le Mont &amp; Saint-Malo en un jour</a>
 <a href="/fr/mont-saint-michel-map/">Carte et meilleur itinéraire</a>
 <a href="/fr/mont-saint-michel-where-to-stay/">Où dormir : île ou continent</a>
 <a href="/fr/mont-saint-michel-from-paris-day-trip/">Mont-Saint-Michel depuis Paris (un jour)</a>
@@ -186,7 +191,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <p class="sub">Le Mont-Saint-Michel se dresse dans une baie à la frontière de la Normandie et de la Bretagne, loin des grandes villes — mais y aller est plus simple qu'il n'y paraît. Voici tous les itinéraires, avec les tarifs et durées 2026.</p>
 <div class="byline"><span>Par <b>Eugene</b></span><span>Mis à jour en <b>juillet 2026</b></span><span><b>6 minutes</b> de lecture</span></div>
 <div class="herobtns">
-<a class="btn" href="https://touringbee.com/fr/product/mont-saint-michel-audioguide-fr/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=transport_hero" target="_blank" rel="noopener sponsored">Acheter l'audioguide</a>
+<a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=fr" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=fr" target="_blank" rel="noopener sponsored">Acheter l'audioguide</a>
 <a class="btn dark" href="https://www.getyourguide.com/mont-saint-michel-l1805/?partner_id=0M4BUCG&utm_medium=travel_agent" target="_blank" rel="noopener sponsored">Excursion à la journée depuis Paris</a>
 <a class="btn ghost" href="https://www.booking.com/cars/index.html?aid=1437498" target="_blank" rel="noopener sponsored">Louer une voiture</a>
 </div>
@@ -196,7 +201,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <p class="lead">Le Mont-Saint-Michel se dresse dans une baie à la frontière de la Normandie et de la Bretagne, loin des grandes villes — et on peut y aller de plusieurs façons. Bonne nouvelle : quel que soit votre choix, le dernier tronçon est le même — une navette gratuite depuis le parking du continent jusqu'à l'îlot. Ce guide explique comment venir depuis Paris et depuis la région, ce que ça coûte et le temps que ça prend.</p>
 
-<p>Nous passerons en revue chaque option — le train, le bus via Rennes, la voiture et la navette finale « Le Passeur ». À la fin, vous saurez quel itinéraire vous convient, sans perdre de temps en files et correspondances hasardeuses. Et pour la marche du rivage jusqu'aux portes de l'abbaye, notre <a href="https://touringbee.com/fr/product/mont-saint-michel-audioguide-fr/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=transport_intro" target="_blank" rel="noopener sponsored">audioguide autonome</a> vous raconte les histoires à votre rythme — téléchargez-le avant de partir.</p>
+<p>Nous passerons en revue chaque option — le train, le bus via Rennes, la voiture et la navette finale « Le Passeur ». À la fin, vous saurez quel itinéraire vous convient, sans perdre de temps en files et correspondances hasardeuses. Et pour la marche du rivage jusqu'aux portes de l'abbaye, notre <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=fr" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=fr" target="_blank" rel="noopener sponsored">audioguide autonome</a> vous raconte les histoires à votre rythme — téléchargez-le avant de partir.</p>
 
 <p>Vous préparez tout le séjour ? Commencez par notre <a href="/fr/">guide complet du Mont-Saint-Michel</a>, et revenez ici pour les détails du trajet.</p>
 
@@ -290,7 +295,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <li>aimez une promenade tranquille ;</li>
 <li>êtes arrivé par beau temps.</li>
 </ul>
-<p>Beaucoup marchent à l'aller et rentrent en navette. On profite des panoramas sans s'épuiser en fin de journée. Dans les deux cas, vous pouvez profiter de notre <a href="https://touringbee.com/fr/product/mont-saint-michel-audioguide-fr/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=transport_walk" target="_blank" rel="noopener sponsored">audioguide autonome</a>, qui vous raconte les histoires sur le chemin du rocher.</p>
+<p>Beaucoup marchent à l'aller et rentrent en navette. On profite des panoramas sans s'épuiser en fin de journée. Dans les deux cas, vous pouvez profiter de notre <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=fr" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=fr" target="_blank" rel="noopener sponsored">audioguide autonome</a>, qui vous raconte les histoires sur le chemin du rocher.</p>
 <p><strong>Conseil TouringBee :</strong> si le temps le permet, faites au moins un trajet à pied. La digue offre les plus belles vues du Mont-Saint-Michel — impossibles à saisir depuis la navette. Vous pourrez toujours rentrer avec Le Passeur gratuit.</p>
 
 <h2 id="time">Combien de temps prévoir</h2>
@@ -310,7 +315,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg> 8 langues, narration par une vraie voix</li>
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg> Fonctionne sur iOS et Android</li>
 </ul>
-<a class="btn block" href="https://touringbee.com/fr/product/mont-saint-michel-audioguide-fr/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=transport_card" target="_blank" rel="noopener sponsored">Acheter l'audioguide — dès 9,99 €</a>
+<a class="btn block bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=fr" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=fr" target="_blank" rel="noopener sponsored">Acheter l'audioguide — dès 9,99 €</a>
 </div>
 </div>
 <p>Quand vous atteignez enfin les portes, c'est agréable de savoir déjà quoi regarder. L'audioguide TouringBee du Mont-Saint-Michel vous accompagne du rivage aux portes de l'abbaye : une carte hors ligne montre où vous êtes, et chaque récit se lance quand vous arrivez au point. Sans internet, en plusieurs langues, à votre rythme. Astuce : téléchargez-le dans le train ou la voiture — il n'y a pas de Wi-Fi et le signal mobile est faible au point de départ.</p>
@@ -352,7 +357,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <h2 id="conclusion">À retenir</h2>
 <p>Aller au Mont-Saint-Michel ne semble compliqué que sur le papier. En pratique, le choix est simple : le train direct depuis Paris s'il circule à vos dates ; l'itinéraire par Rennes le reste du temps ; ou la voiture si vous l'associez à d'autres étapes de la région. Et le dernier tronçon est toujours le même — la navette gratuite ou une courte marche sur la digue jusqu'au rocher.</p>
-<p>Pour que l'approche s'accompagne de ses propres histoires, emportez l'<a href="https://touringbee.com/fr/product/mont-saint-michel-audioguide-fr/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=transport_conclusion" target="_blank" rel="noopener sponsored">audioguide de l'îlot TouringBee</a> — il remplit la marche d'histoire à votre rythme.</p>
+<p>Pour que l'approche s'accompagne de ses propres histoires, emportez l'<a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=fr" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=fr" target="_blank" rel="noopener sponsored">audioguide de l'îlot TouringBee</a> — il remplit la marche d'histoire à votre rythme.</p>
 
 <p class="disclose">Certains liens de cette page sont des liens d'affiliation (SNCF, Booking.com, GetYourGuide, Tiqets, TouringBee). Si vous réservez via eux, nous pouvons percevoir une petite commission — sans surcoût pour vous. Cela n'influence jamais nos recommandations. Voir notre <a href="/affiliate-disclosure.html">divulgation d'affiliation</a>.</p>
 
@@ -377,9 +382,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <div class="stickybuy" id="stickybuy">
 <div class="p">Audioguide du Mont-Saint-Michel <small>· dès 9,99 € · hors ligne · en français</small></div>
-<a class="btn" href="https://touringbee.com/fr/product/mont-saint-michel-audioguide-fr/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=transport_stickybar" target="_blank" rel="noopener sponsored">Acheter 9,99 €</a>
+<a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=fr" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=fr" target="_blank" rel="noopener sponsored">Acheter 9,99 €</a>
 </div>
 <script>(function(){var b=document.getElementById('stickybuy');if(!b)return;function s(){if(window.scrollY>700){b.classList.add('show')}else{b.classList.remove('show')}}window.addEventListener('scroll',s,{passive:true});s();})();</script>
 
+<script>/* Load Bokun engine only on first user interaction — never on page load (keeps CWV/Lighthouse fast) */(function(){var l=0;function b(){if(l)return;l=1;var s=document.createElement('script');s.async=true;s.src='https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=d0f139b1-7599-4d82-9b4b-5388a20fa191';document.body.appendChild(s);}['mouseover','touchstart','scroll','keydown','pointerdown'].forEach(function(e){window.addEventListener(e,b,{once:true,passive:true});});})();</script>
 </body>
 </html>

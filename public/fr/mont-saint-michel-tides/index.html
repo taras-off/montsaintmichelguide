@@ -141,6 +141,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 @media(max-width:720px){.fcols{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.ahero h1{font-size:27px}.topbar{height:auto;flex-wrap:wrap;gap:4px;padding:8px 0}.lang a{padding:8px 7px}}
 @media(max-width:640px){.dropdown{left:0;right:auto;max-width:calc(100vw - 40px)}}
+
+/* Bokun widget: take injected root/cart OUT of document flow (kills CLS); modal untouched */
+#bokun-widgets-root{position:fixed!important;top:0!important;left:0!important;width:0!important;height:0!important;overflow:visible!important;z-index:2147483000!important}
+.bokun-widgets-cart-wrapper{position:fixed!important;top:auto!important;left:auto!important;right:16px!important;bottom:16px!important;margin:0!important;z-index:2147483000!important}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -167,6 +171,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <div class="nav-wrap">
 <details class="menu"><summary>Guides <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="dropdown">
+<a href="/fr/mont-saint-michel-and-saint-malo-one-day/">Le Mont &amp; Saint-Malo en un jour</a>
 <a href="/fr/mont-saint-michel-map/">Carte et meilleur itinéraire</a>
 <a href="/fr/mont-saint-michel-where-to-stay/">Où dormir : île ou continent</a>
 <a href="/fr/mont-saint-michel-from-paris-day-trip/">Mont-Saint-Michel depuis Paris (un jour)</a>
@@ -186,7 +191,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <p class="sub">Les marées sont ce qui rend le Mont-Saint-Michel unique en France — et ce qui décide si votre visite sera spectaculaire ou fade. Voici comment les lire pour 2026.</p>
 <div class="byline"><span>Par <b>Eugene</b></span><span>Mis à jour en <b>juillet 2026</b></span><span><b>8 min</b> de lecture</span></div>
 <div class="herobtns">
-<a class="btn" href="https://touringbee.com/fr/product/mont-saint-michel-audioguide-fr/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=tides_hero" target="_blank" rel="noopener sponsored">Acheter l'audioguide</a>
+<a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=fr" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=fr" target="_blank" rel="noopener sponsored">Acheter l'audioguide</a>
 <a class="btn dark" href="https://www.getyourguide.com/mont-saint-michel-l1805/?partner_id=0M4BUCG&utm_medium=travel_agent" target="_blank" rel="noopener sponsored">Réserver une traversée guidée de la baie</a>
 <a class="btn ghost" href="https://www.tiqets.com/mont-saint-michel-abbey-tickets-l145867/?partner=touringbee_limited-180893&tq_campaign=msmguide" target="_blank" rel="noopener sponsored">Acheter un billet d'abbaye</a>
 </div>
@@ -198,7 +203,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <p>Ce guide est pour ceux qui planifient la visite eux-mêmes. Nous verrons comment fonctionnent les marées dans la baie, ce qu'est le coefficient de marée, à quelle vitesse l'eau revient, d'où l'observer, quand l'accès au rocher est fermé et quelles règles de sécurité comptent vraiment ici. À la fin, vous saurez choisir le bon jour et la bonne heure.</p>
 
-<p>Comme tout se joue au bon moment et que la fenêtre peut être courte, il est utile d'avoir l'histoire avec soi : l'<a href="https://touringbee.com/fr/product/mont-saint-michel-audioguide-fr/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=tides_intro" target="_blank" rel="noopener sponsored">audioguide TouringBee de l'île</a> en visite libre commence au barrage par le récit des marées, avant même de monter, et fonctionne hors ligne à votre rythme. Vous hésitez encore sur la saison ? Voyez notre analyse du <a href="/fr/best-time-to-visit-mont-saint-michel/">meilleur moment pour venir</a>.</p>
+<p>Because the timing is everything and your window can be short, it helps to have the story with you: the self-guided <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=fr" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=fr" target="_blank" rel="noopener sponsored">TouringBee island audio tour</a> opens at the dam with the tides before you even climb up, and runs offline at your own pace. Still deciding on the season? See our guide to the <a href="/fr/best-time-to-visit-mont-saint-michel/">meilleur moment pour visiter</a>.</p>
 
 <p>Vous préparez encore tout le séjour ? Commencez par notre <a href="/fr/">guide complet du Mont-Saint-Michel</a>, puis revenez ici pour les détails des marées.</p>
 
@@ -248,7 +253,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg> 8 langues, narration par une vraie voix</li>
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg> Fonctionne sur iOS et Android</li>
 </ul>
-<a class="btn block" href="https://touringbee.com/fr/product/mont-saint-michel-audioguide-fr/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=tides_card" target="_blank" rel="noopener sponsored">Acheter l'audioguide — dès 9,99 €</a>
+<a class="btn block bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=fr" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=fr" target="_blank" rel="noopener sponsored">Acheter l'audioguide — dès 9,99 €</a>
 </div>
 </div>
 <p>L'audioguide TouringBee de l'île commence au barrage par l'histoire des marées, avant même la montée — si bien qu'en arrivant sur les remparts, tout le tableau s'est mis en place. La carte GPS hors ligne fonctionne sans internet et montre où vous êtes ; vous lancez chaque piste vous-même en arrivant sur place.</p>
@@ -365,7 +370,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <h2 id="conclusion">À retenir</h2>
 <p>Les marées sont le spectacle quotidien du Mont-Saint-Michel. Quelques minutes avec un tableau décident de l'acte que vous verrez. Vous voulez l'île dans l'eau — prenez un jour à fort coefficient et arrivez tôt sur le mur. Vous voulez le calme et l'espace — prenez les heures autour de la marée basse. Mais ne marchez jamais sur le sable sans guide.</p>
-<p>Lisez l'eau d'abord — et le reste du voyage se met en place. Et si vous voulez comprendre ce qui se passe dans la baie plutôt que seulement le regarder, l'<a href="https://touringbee.com/fr/product/mont-saint-michel-audioguide-fr/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=tides_conclusion" target="_blank" rel="noopener sponsored">audioguide TouringBee de l'île</a> commence au barrage par les marées et porte le récit jusqu'aux portes de l'abbaye.</p>
+<p>Read the water first. The rest of the trip falls into place. And if you'd like to understand what's happening in the bay rather than just watch it, the <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=fr" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=fr" target="_blank" rel="noopener sponsored">audioguide de l'îlot TouringBee</a> begins at the dam with the tides and carries the story all the way to the abbey doors.</p>
 
 <p class="disclose">Certains liens de cette page sont des liens d'affiliation (GetYourGuide, Tiqets, TouringBee). Si vous réservez par leur intermédiaire, nous pouvons percevoir une petite commission — sans surcoût pour vous. Cela n'influence jamais nos recommandations. Voir notre <a href="/affiliate-disclosure.html">divulgation d'affiliation</a>.</p>
 
@@ -390,9 +395,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <div class="stickybuy" id="stickybuy">
 <div class="p">Audioguide du Mont-Saint-Michel <small>· dès 9,99 € · hors ligne · en français</small></div>
-<a class="btn" href="https://touringbee.com/fr/product/mont-saint-michel-audioguide-fr/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=tides_stickybar" target="_blank" rel="noopener sponsored">Acheter 9,99 €</a>
+<a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=fr" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=fr" target="_blank" rel="noopener sponsored">Acheter 9,99 €</a>
 </div>
 <script>(function(){var b=document.getElementById('stickybuy');if(!b)return;function s(){if(window.scrollY>700){b.classList.add('show')}else{b.classList.remove('show')}}window.addEventListener('scroll',s,{passive:true});s();})();</script>
 
+<script>/* Load Bokun engine only on first user interaction — never on page load (keeps CWV/Lighthouse fast) */(function(){var l=0;function b(){if(l)return;l=1;var s=document.createElement('script');s.async=true;s.src='https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=d0f139b1-7599-4d82-9b4b-5388a20fa191';document.body.appendChild(s);}['mouseover','touchstart','scroll','keydown','pointerdown'].forEach(function(e){window.addEventListener(e,b,{once:true,passive:true});});})();</script>
 </body>
 </html>

@@ -141,6 +141,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 @media(max-width:720px){.fcols{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.ahero h1{font-size:27px}.topbar{height:auto;flex-wrap:wrap;gap:4px;padding:8px 0}.lang a{padding:8px 7px}}
 @media(max-width:640px){.dropdown{left:0;right:auto;max-width:calc(100vw - 40px)}}
+
+/* Bokun widget: take injected root/cart OUT of document flow (kills CLS); modal untouched */
+#bokun-widgets-root{position:fixed!important;top:0!important;left:0!important;width:0!important;height:0!important;overflow:visible!important;z-index:2147483000!important}
+.bokun-widgets-cart-wrapper{position:fixed!important;top:auto!important;left:auto!important;right:16px!important;bottom:16px!important;margin:0!important;z-index:2147483000!important}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -167,6 +171,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <div class="nav-wrap">
 <details class="menu"><summary>Guides <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="dropdown">
+<a href="/mont-saint-michel-and-saint-malo-one-day/">MSM &amp; Saint-Malo in one day</a>
 <a href="/mont-saint-michel-map/">Map &amp; best walking route</a>
 <a href="/mont-saint-michel-where-to-stay/">Where to stay: island vs mainland</a>
 <a href="/mont-saint-michel-from-paris-day-trip/">Mont-Saint-Michel from Paris (day trip)</a>
@@ -186,7 +191,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <p class="sub">Mont-Saint-Michel sits in a bay on the Normandy–Brittany border, far from big cities — but getting there is simpler than it looks. Here's every route, with 2026 prices and travel times.</p>
 <div class="byline"><span>By <b>Eugene</b></span><span>Updated <b>July 2026</b></span><span><b>6-minute</b> read</span></div>
 <div class="herobtns">
-<a class="btn" href="https://touringbee.com/product/mont-saint-michel-audioguide/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=transport_hero" target="_blank" rel="noopener sponsored">Buy the audio guide</a>
+<a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1" target="_blank" rel="noopener sponsored">Buy the audio guide</a>
 <a class="btn dark" href="https://www.getyourguide.com/mont-saint-michel-l1805/?partner_id=0M4BUCG&utm_medium=travel_agent" target="_blank" rel="noopener sponsored">Book a day trip from Paris</a>
 <a class="btn ghost" href="https://www.booking.com/cars/index.html?aid=1437498" target="_blank" rel="noopener sponsored">Rent a car</a>
 </div>
@@ -196,7 +201,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <p class="lead">Mont-Saint-Michel stands in a bay on the border of Normandy and Brittany, away from the big cities — and there are several ways to reach it. The good news: whichever you choose, the last stretch is the same — a free shuttle from the mainland car park to the island itself. This guide lays out how to get there from Paris and from the region, what it costs, and how long it takes.</p>
 
-<p>We'll go through each option — the train, the bus via Rennes, driving, and the final "Le Passeur" shuttle. By the end you'll know which route suits you, and you won't lose time to queues and awkward connections. And for the walk from the shore to the abbey itself, our <a href="https://touringbee.com/product/mont-saint-michel-audioguide/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=transport_intro" target="_blank" rel="noopener sponsored">self-guided audio guide</a> tells you the stories at your own pace — download it before you set off.</p>
+<p>We'll go through each option — the train, the bus via Rennes, driving, and the final "Le Passeur" shuttle. By the end you'll know which route suits you, and you won't lose time to queues and awkward connections. And for the walk from the shore to the abbey itself, our <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1" target="_blank" rel="noopener sponsored">self-guided audio guide</a> tells you the stories at your own pace — download it before you set off.</p>
 
 <p>Planning the whole trip? Start with our <a href="/">complete guide to Mont-Saint-Michel</a>, and come back here for the travel details.</p>
 
@@ -290,7 +295,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <li>enjoy a calm stroll;</li>
 <li>arrived in good weather.</li>
 </ul>
-<p>Many travellers walk out to the island and take the shuttle back. You get the panoramas without tiring yourself out at the end of the day. Either way, you can enjoy our <a href="https://touringbee.com/product/mont-saint-michel-audioguide/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=transport_walk" target="_blank" rel="noopener sponsored">self-guided audio guide</a>, which tells you the stories on the way to the rock.</p>
+<p>Many travellers walk out to the island and take the shuttle back. You get the panoramas without tiring yourself out at the end of the day. Either way, you can enjoy our <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1" target="_blank" rel="noopener sponsored">self-guided audio guide</a>, which tells you the stories on the way to the rock.</p>
 <p><strong>TouringBee tip:</strong> if the weather allows, walk at least one direction. The causeway gives the finest views of Mont-Saint-Michel — ones you'll never catch from the shuttle window. You can always ride the free Le Passeur back.</p>
 
 <h2 id="time">How much time to allow</h2>
@@ -310,7 +315,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg> 8 languages, real voice narration</li>
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg> Works on iOS &amp; Android</li>
 </ul>
-<a class="btn block" href="https://touringbee.com/product/mont-saint-michel-audioguide/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=transport_card" target="_blank" rel="noopener sponsored">Buy the Audio Guide — from &euro;9.99</a>
+<a class="btn block bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1" target="_blank" rel="noopener sponsored">Buy the Audio Guide — from &euro;9.99</a>
 </div>
 </div>
 <p>When you finally reach the gates, it helps to already know what you're looking at. TouringBee's Mont-Saint-Michel audio guide walks you from the shore to the abbey doors: an offline map shows where you are, and you start each track yourself when you reach the spot. No internet needed, several languages, at your own pace. Tip: download it on the train or in the car — there's no Wi-Fi and weak mobile signal at the starting point.</p>
@@ -352,7 +357,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <h2 id="conclusion">The takeaway</h2>
 <p>Getting to Mont-Saint-Michel only looks complicated on paper. In practice the choice is simple: the direct train from Paris if it runs on your dates; the Rennes route the rest of the time; or a car if you're combining it with other stops in the region. And the final stretch is always the same — the free shuttle or a short walk along the causeway to the rock.</p>
-<p>To make the approach come with its own stories, bring along the <a href="https://touringbee.com/product/mont-saint-michel-audioguide/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=transport_conclusion" target="_blank" rel="noopener sponsored">TouringBee island audio guide</a> — it fills the walk with history at your own pace.</p>
+<p>To make the approach come with its own stories, bring along the <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1" target="_blank" rel="noopener sponsored">TouringBee island audio guide</a> — it fills the walk with history at your own pace.</p>
 
 <p class="disclose">Some links on this page are affiliate links (SNCF, Booking.com, GetYourGuide, Tiqets, TouringBee). If you book through them we may earn a small commission — at no extra cost to you. It never affects what we recommend. See our <a href="/affiliate-disclosure.html">Affiliate Disclosure</a>.</p>
 
@@ -377,9 +382,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <div class="stickybuy" id="stickybuy">
 <div class="p">Mont-Saint-Michel Audio Guide <small>· from &euro;9.99 · offline · in English</small></div>
-<a class="btn" href="https://touringbee.com/product/mont-saint-michel-audioguide/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=transport_stickybar" target="_blank" rel="noopener sponsored">Buy &euro;9.99</a>
+<a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1" target="_blank" rel="noopener sponsored">Buy &euro;9.99</a>
 </div>
 <script>(function(){var b=document.getElementById('stickybuy');if(!b)return;function s(){if(window.scrollY>700){b.classList.add('show')}else{b.classList.remove('show')}}window.addEventListener('scroll',s,{passive:true});s();})();</script>
 
+<script>/* Load Bokun engine only on first user interaction — never on page load (keeps CWV/Lighthouse fast) */(function(){var l=0;function b(){if(l)return;l=1;var s=document.createElement('script');s.async=true;s.src='https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=d0f139b1-7599-4d82-9b4b-5388a20fa191';document.body.appendChild(s);}['mouseover','touchstart','scroll','keydown','pointerdown'].forEach(function(e){window.addEventListener(e,b,{once:true,passive:true});});})();</script>
 </body>
 </html>

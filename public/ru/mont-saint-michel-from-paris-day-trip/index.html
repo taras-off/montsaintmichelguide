@@ -141,6 +141,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 @media(max-width:720px){.fcols{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.ahero h1{font-size:27px}.topbar{height:auto;flex-wrap:wrap;gap:4px;padding:8px 0}.lang a{padding:8px 7px}}
 @media(max-width:640px){.dropdown{left:0;right:auto;max-width:calc(100vw - 40px)}}
+
+/* Bokun widget: take injected root/cart OUT of document flow (kills CLS); modal untouched */
+#bokun-widgets-root{position:fixed!important;top:0!important;left:0!important;width:0!important;height:0!important;overflow:visible!important;z-index:2147483000!important}
+.bokun-widgets-cart-wrapper{position:fixed!important;top:auto!important;left:auto!important;right:16px!important;bottom:16px!important;margin:0!important;z-index:2147483000!important}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -167,6 +171,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <div class="nav-wrap">
 <details class="menu"><summary>Гиды <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="dropdown">
+<a href="/ru/mont-saint-michel-and-saint-malo-one-day/">Мон-Сен-Мишель и Сен-Мало за день</a>
 <a href="/ru/mont-saint-michel-map/">Карта и лучший маршрут</a>
 <a href="/ru/mont-saint-michel-where-to-stay/">Где остановиться: остров или материк</a>
 <a href="/ru/mont-saint-michel-from-paris-day-trip/">Мон-Сен-Мишель из Парижа (на день)</a>
@@ -186,7 +191,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <p class="sub">Да, за день реально — но день будет длинным, и от способа поездки зависит почти всё впечатление. Здесь — реальное расписание 2026 года, цены и честный вывод.</p>
 <div class="byline"><span>Автор: <b>Eugene</b></span><span>Обновлено <b>июль 2026</b></span><span><b>8 мин</b> чтения</span></div>
 <div class="herobtns">
-<a class="btn" href="https://touringbee.com/ru/product/mont-saint-michel-audioguide-of-the-island-ru/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=paris_hero" target="_blank" rel="noopener sponsored">Купить аудиогид</a>
+<a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=ru" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=ru" target="_blank" rel="noopener sponsored">Купить аудиогид</a>
 <a class="btn dark" href="https://www.getyourguide.com/mont-saint-michel-l1805/?partner_id=0M4BUCG&utm_medium=travel_agent" target="_blank" rel="noopener sponsored">Забронировать тур из Парижа</a>
 <a class="btn ghost" href="https://www.tiqets.com/mont-saint-michel-abbey-tickets-l145867/?partner=touringbee_limited-180893&tq_campaign=msmguide" target="_blank" rel="noopener sponsored">Купить билет в аббатство</a>
 </div>
@@ -198,7 +203,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <p>Каждый год Мон-Сен-Мишель посещают около трёх миллионов человек, и большинство приезжает примерно в одно и то же время — между поздним утром и серединой дня. Поэтому впечатления зависят не только от выбранного транспорта, но и от времени прибытия. Если правильно спланировать маршрут, можно увидеть остров совсем другим.</p>
 
-<p>Этот гид — для тех, кто выбирает между поездом, организованной экскурсией и машиной и решает: хватит ли одного дня или лучше остаться на ночь. А поскольку часов на острове немного, мы покажем, где окупается самостоятельная <a href="https://touringbee.com/ru/product/mont-saint-michel-audioguide-of-the-island-ru/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=paris_intro" target="_blank" rel="noopener sponsored">аудиоэкскурсия TouringBee по острову</a> — её можно включить ещё в поезде и слушать офлайн в своём темпе.</p>
+<p>This guide is for anyone choosing between the train, an organised tour and a car — and deciding whether one day is enough or a night is better. And because your hours on the rock are few, we'll also show where a self-guided <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=ru" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=ru" target="_blank" rel="noopener sponsored">TouringBee audio tour of the island</a> — one you can start on the train and run offline at your own pace — earns its keep.</p>
 
 <p>Ниже — реальное расписание автобусов на 2026 год с точным временем, как взять билет в аббатство, что успеть за несколько часов, где поесть и сколько всё это стоит, плюс честный вывод из наших поездок: когда ночёвка выигрывает у однодневной вылазки. Если вас интересует только транспорт, смотрите наш отдельный гид — <a href="/ru/how-to-get-to-mont-saint-michel/">как добраться до Мон-Сен-Мишеля</a>.</p>
 
@@ -276,7 +281,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <h2 id="fit">Что успеть за несколько часов</h2>
 <p>Если у вас 4–6 часов на острове, отбирайте жёстко. Заходите через Королевские ворота, но не лезьте вверх по забитой Гранд-Рю — сверните на крепостную стену или на боковую лестницу. Они выводят к аббатству ничуть не хуже, людей там в разы меньше, а вид лучше.</p>
 <p>Дальше: аббатство по билету на своё время, прогулка по стенам и Северной башне, тихое кладбище, быстрый перекус. Музеи оставьте на длинный визит.</p>
-<p>Именно потому, что часов мало, аудиогид окупается. <a href="https://touringbee.com/ru/product/mont-saint-michel-audioguide-of-the-island-ru/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=paris_body" target="_blank" rel="noopener sponsored">Аудиоэкскурсия TouringBee по острову</a> идёт в вашем темпе, без группы и без чужого расписания. Работает офлайн: GPS-карта показывает, где вы находитесь, а запись вы включаете сами, подойдя к точке.</p>
+<p>Precisely because your hours are few, an audio guide pays for itself. The <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=ru" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=ru" target="_blank" rel="noopener sponsored">TouringBee island audio tour</a> moves at your pace, with no group and no fixed schedule. It works offline: a GPS map shows where you are, and you start each track yourself as you reach the spot.</p>
 
 <h2 id="tight">Если времени совсем мало</h2>
 <p>При короткой поездке не пытайтесь увидеть всё сразу.</p>
@@ -358,7 +363,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg> 8 языков, живой голос диктора</li>
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg> Работает на iOS и Android</li>
 </ul>
-<a class="btn block" href="https://touringbee.com/ru/product/mont-saint-michel-audioguide-of-the-island-ru/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=paris_card" target="_blank" rel="noopener sponsored">Купить аудиогид — от €9,99</a>
+<a class="btn block bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=ru" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=ru" target="_blank" rel="noopener sponsored">Купить аудиогид — от €9,99</a>
 </div>
 </div>
 <p>Когда часов на скале всего ничего, именно контекст делает их ценными. Аудиоэкскурсия TouringBee по острову ведёт вас от берега до дверей аббатства: офлайн-карта показывает, где вы находитесь, а запись вы включаете сами, дойдя до точки. Интернет не нужен, несколько языков, в своём темпе. Совет: скачайте её в поезде — рядом с островом нет Wi-Fi и слабый сигнал.</p>
@@ -400,7 +405,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <h2 id="conclusion">Итог</h2>
 <p>Однодневная поездка из Парижа работает. Возьмите самый ранний рейс, забронируйте аббатство на время, обойдите давку на Гранд-Рю по крепостной стене и держите в голове обратный автобус. Тогда вы постоите на стенах одного из главных мест Франции и всё равно переночуете в Париже.</p>
 <p>Но если для вас важны кадры и тишина — дайте Мон-Сен-Мишелю одну ночь. После шести вечера он превращается в место, которое большинство приезжих на день так и не увидят.</p>
-<p>В любом случае остров вознаграждает тех, кто приезжает с планом. Включите <a href="https://touringbee.com/ru/product/mont-saint-michel-audioguide-of-the-island-ru/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=paris_conclusion" target="_blank" rel="noopener sponsored">аудиоэкскурсию TouringBee</a> ещё в поезде — и к моменту, когда дойдёте до туристического центра, будете готовы использовать каждый из своих немногих часов.</p>
+<p>Either way, the island rewards those who arrive with a plan. Start the <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=ru" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=ru" target="_blank" rel="noopener sponsored">TouringBee audio tour</a> on the train, and by the time you reach the visitor centre you'll be ready to use every one of your few hours.</p>
 
 <p class="disclose">Некоторые ссылки на этой странице — партнёрские (SNCF, GetYourGuide, Tiqets, Booking.com, TouringBee). Если вы бронируете по ним, мы можем получить небольшую комиссию — без наценки для вас. Это никогда не влияет на наши рекомендации. См. наш <a href="/affiliate-disclosure.html">Партнёрское раскрытие</a>.</p>
 
@@ -425,9 +430,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <div class="stickybuy" id="stickybuy">
 <div class="p">Аудиогид по Мон-Сен-Мишелю <small>· от €9,99 · офлайн · на русском</small></div>
-<a class="btn" href="https://touringbee.com/ru/product/mont-saint-michel-audioguide-of-the-island-ru/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=paris_stickybar" target="_blank" rel="noopener sponsored">Купить €9,99</a>
+<a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?lang=ru" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=ru" target="_blank" rel="noopener sponsored">Купить €9,99</a>
 </div>
 <script>(function(){var b=document.getElementById('stickybuy');if(!b)return;function s(){if(window.scrollY>700){b.classList.add('show')}else{b.classList.remove('show')}}window.addEventListener('scroll',s,{passive:true});s();})();</script>
 
+<script>/* Load Bokun engine only on first user interaction — never on page load (keeps CWV/Lighthouse fast) */(function(){var l=0;function b(){if(l)return;l=1;var s=document.createElement('script');s.async=true;s.src='https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=d0f139b1-7599-4d82-9b4b-5388a20fa191';document.body.appendChild(s);}['mouseover','touchstart','scroll','keydown','pointerdown'].forEach(function(e){window.addEventListener(e,b,{once:true,passive:true});});})();</script>
 </body>
 </html>
