@@ -10,12 +10,16 @@ This site is a TouringBee project. It is independent and not affiliated with the
 - [Abbey tickets, prices, hours & what's inside](https://montsaintmichelguide.com/mont-saint-michel-abbey-tickets/): 2026 prices and opening hours, ticket types, best time to go up, and a room-by-room walk through the abbey.
 - [How to get to Mont-Saint-Michel](https://montsaintmichelguide.com/how-to-get-to-mont-saint-michel/): by train, car, from Paris and from the airports; parking, the free shuttle and the walk across the causeway.
 - [Best time to visit Mont-Saint-Michel](https://montsaintmichelguide.com/best-time-to-visit-mont-saint-michel/): best months, weekdays vs weekends, morning vs evening, the tides, weather and winter — and how to beat the crowds.
+- [Mont-Saint-Michel with kids](https://montsaintmichelguide.com/mont-saint-michel-with-kids/): strollers and baby carriers, how long children last, free abbey entry for under-18s, a spot-it game, tide safety and the best time to go.
+- [Where to eat at Mont-Saint-Michel](https://montsaintmichelguide.com/mont-saint-michel-where-to-eat/): the Mère Poulard omelette and whether it's worth it, crêperies, AOP salt-meadow lamb and bay mussels, island vs mainland, and dinner after the day crowds.
+- [History and legends of Mont-Saint-Michel](https://montsaintmichelguide.com/mont-saint-michel-history/): timeline from Bishop Aubert's vision in 708 to the UNESCO island — the abbey and La Merveille, pilgrims, the fortress never taken, the prison years, and the legends.
 - [Mont-Saint-Michel from Paris by train](https://montsaintmichelguide.com/mont-saint-michel-from-paris-by-train/): the Rennes and Pontorson routes, the three ground transfers, the Le Passeur shuttle hours, costs and a sample day-trip timetable.
 - [Crossing the bay of Mont-Saint-Michel](https://montsaintmichelguide.com/mont-saint-michel-bay-crossing/): guided walks across the seabed — why you never go alone, quicksand and tides, routes, start points, what to bring and how to book.
 - [All guides index](https://montsaintmichelguide.com/guides/): full list of guides and articles.
 
 ## Audio tour
 
+- [Mont-Saint-Michel audio guide (self-guided tour)](https://montsaintmichelguide.com/mont-saint-michel-audio-guide/): what the TouringBee audio guide covers, how it works, and how it compares with the abbey's own audio guide and guided tours. Abbey entry not included.
 - [Mont-Saint-Michel self-guided audio tour (TouringBee)](https://touringbee.com/product/mont-saint-michel-audioguide/?wpam_id=40): offline, GPS-based, real-voice narration in 8 languages; explore the island at your own pace.
 
 ## Languages

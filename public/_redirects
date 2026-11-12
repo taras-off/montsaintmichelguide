@@ -1,0 +1,13 @@
+# Real 404s are served by /404.html (and /<lang>/404.html). Old/mistyped URLs seen in Search Console:
+/plan-your-visit /how-to-get-to-mont-saint-michel/ 301
+/plan-your-visit/ /how-to-get-to-mont-saint-michel/ 301
+/what-to-see /mont-saint-michel-map/ 301
+/what-to-see/ /mont-saint-michel-map/ 301
+/how-to-get-to-not-saint-michel /how-to-get-to-mont-saint-michel/ 301
+/how-to-get-to-not-saint-michel/ /how-to-get-to-mont-saint-michel/ 301
+/mont-saint-michel-where-for-stay /mont-saint-michel-where-to-stay/ 301
+/mont-saint-michel-where-for-stay/ /mont-saint-michel-where-to-stay/ 301
+/:lang/plan-your-visit/ /:lang/how-to-get-to-mont-saint-michel/ 301
+/:lang/what-to-see/ /:lang/mont-saint-michel-map/ 301
+/:lang/how-to-get-to-not-saint-michel/ /:lang/how-to-get-to-mont-saint-michel/ 301
+/:lang/mont-saint-michel-where-for-stay/ /:lang/mont-saint-michel-where-to-stay/ 301
