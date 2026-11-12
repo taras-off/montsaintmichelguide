@@ -168,6 +168,11 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 /* Bokun widget: take injected root/cart OUT of document flow (kills CLS); modal untouched */
 #bokun-widgets-root{position:fixed!important;top:0!important;left:0!important;width:0!important;height:0!important;overflow:visible!important;z-index:2147483000!important}
 .bokun-widgets-cart-wrapper{position:fixed!important;top:auto!important;left:auto!important;right:16px!important;bottom:16px!important;margin:0!important;z-index:2147483000!important}
+.tb-banner{display:flex;flex-wrap:wrap;gap:16px;align-items:center;box-sizing:border-box;border:2px solid var(--brand);border-radius:12px;padding:16px;background:var(--soft);margin:28px auto}
+.tb-banner img{display:block;width:132px;height:96px;object-fit:cover;border-radius:8px;margin:0;flex:0 0 132px}
+.tb-banner .tb-body{flex:1 1 260px;min-width:0;padding:0}
+.tb-banner .tb-h{margin:0 0 4px;font-weight:700;color:var(--ink);font-size:18px;line-height:1.35}
+.tb-banner .tb-t{margin:0 0 12px;font-size:16px;line-height:1.55}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -195,10 +200,14 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <div class="nav-wrap">
 <details class="menu"><summary>Guides <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
 <div class="dropdown">
+<a href="/mont-saint-michel-audio-guide/">Mont-Saint-Michel audio guide</a>
+<a href="/mont-saint-michel-history/">History &amp; legends</a>
 <a href="/mont-saint-michel-and-saint-malo-one-day/">MSM &amp; Saint-Malo in one day</a>
 <a href="/mont-saint-michel-map/">Map &amp; best walking route</a>
 <a href="/best-time-to-visit-mont-saint-michel/">Best time to visit</a>
 <a href="/mont-saint-michel-where-to-stay/">Where to stay: island vs mainland</a>
+<a href="/mont-saint-michel-where-to-eat/">Where to eat &amp; Mère Poulard</a>
+<a href="/mont-saint-michel-with-kids/">Mont-Saint-Michel with kids</a>
 <a href="/mont-saint-michel-from-paris-day-trip/">Mont-Saint-Michel from Paris (day trip)</a>
 <a href="/mont-saint-michel-from-paris-by-train/">From Paris by train</a>
 <a href="/mont-saint-michel-tides/">The tides: reading the schedule</a>
@@ -219,7 +228,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <div class="byline"><span>By <b>Eugene</b></span><span>Updated <b>July 2026</b></span><span><b>7-minute</b> read</span></div>
 <div class="herobtns">
 <a class="btn" href="https://www.tiqets.com/mont-saint-michel-abbey-tickets-l145867/?partner=touringbee_limited-180893&tq_campaign=msmguide" target="_blank" rel="noopener sponsored">Buy abbey tickets</a>
-<a class="btn dark bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1" target="_blank" rel="noopener sponsored">Buy the audio guide</a>
+<a class="btn dark bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1">Buy the audio guide</a>
 <a class="btn ghost" href="https://www.getyourguide.com/mont-saint-michel-l1805/?partner_id=0M4BUCG&utm_medium=travel_agent" target="_blank" rel="noopener sponsored">Book a guided tour</a>
 </div>
 </div></div>
@@ -229,6 +238,14 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <p class="lead">The abbey is the reason Mont-Saint-Michel exists, and for most visitors it is the only part they actually pay for: the walled village and the ramparts below are free. This guide is for anyone who wants to sort out their Mont-Saint-Michel Abbey tickets ahead of time — what entry costs, the current opening hours, what's included, and what you really see once you climb inside.</p>
 
 <p>We'll walk through ticket types, the best time to go up, the difference between visiting the abbey and doing an audio walk of the island, and finish with a room-by-room look inside. By the end you'll know whether to book ahead, how long to allow, and what not to miss.</p>
+<div class="tb-banner">
+<img src="../img/product-audioguide.webp" alt="Mont-Saint-Michel audio guide" width="132" height="96" loading="lazy">
+<div class="tb-body">
+<div class="tb-h">Your ticket covers the abbey — the island has its own story</div>
+<div class="tb-t">A self-guided audio route through the village and along the ramparts up to the abbey: 17 stops, about 2 hours of walking, offline on your phone, in 8 languages. Abbey entry not included.</div>
+<a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1">Audio guide — from &euro;9.99</a>
+</div>
+</div>
 
 <p>Still planning the whole trip? Start with our <a href="/">complete guide to Mont-Saint-Michel</a>, then come back here for the abbey details.</p>
 
@@ -282,9 +299,9 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Offline GPS map — you start each track yourself at the spot</li>
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg> 8 languages, real voice narration</li>
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg> Works on iOS &amp; Android</li>
-<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Self-guided, around 2–3 hours</li>
+<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Self-guided route, about 2 hours</li>
 </ul>
-<a class="btn block bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1" target="_blank" rel="noopener sponsored">Buy the Audio Guide — from &euro;9.99</a>
+<a class="btn block bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1">Buy the Audio Guide — from &euro;9.99</a>
 </div>
 </div>
 
@@ -304,8 +321,9 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <h2 id="island-vs-abbey">Island walk vs abbey visit</h2>
 <p>First-timers often mix up two different things. The abbey visit is the paid route inside the monastery at the top. The climb through the village — the gates, the Grande Rue, the church of Saint-Pierre, the ramparts — is free and separate.</p>
-<p>If you want to hear the village's own stories on the way up, a self-guided format like TouringBee's island audio walk narrates the path from the shore to the abbey doors on an offline map, then leaves you to tour the abbey interior on your own ticket. Think of it as two halves of one visit: the island route brings you up with context, and the abbey ticket takes you inside. They don't overlap, so you never pay twice for the same thing. <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1" target="_blank" rel="noopener sponsored">See the island audio guide &rarr;</a></p>
+<p>If you want to hear the village's own stories on the way up, a self-guided format like TouringBee's island audio walk narrates the path from the shore to the abbey doors on an offline map, then leaves you to tour the abbey interior on your own ticket. Think of it as two halves of one visit: the island route brings you up with context, and the abbey ticket takes you inside. They don't overlap, so you never pay twice for the same thing. <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1">See the island audio guide &rarr;</a></p>
 
+<p class="ctx-link">For the free part of the visit, see our <a href="/mont-saint-michel-map/">map and walking route</a> of the village and the ramparts.</p>
 <h2 id="best-time">Best time of day to visit</h2>
 <p>Go up for the first entry in the morning — the quietest hour before the day-trip coaches arrive — or late in the day, when the buses leave and the light on the terrace softens. Midday in summer is the busiest, slowest window, best avoided. For the seasonal picture, see our guide to the <a href="/best-time-to-visit-mont-saint-michel/">best time to visit</a>.</p>
 
@@ -338,10 +356,13 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <h2 id="more">Continue exploring</h2>
 <div class="related">
-<a href="/">Mont-Saint-Michel: a complete guide for first-time visitors &rarr;</a>
-<a href="/mont-saint-michel-history/">The history of Mont-Saint-Michel: from an archangel's vision to a UNESCO site &rarr;</a>
-<a href="/mont-saint-michel-architecture/">Mont-Saint-Michel architecture, explained simply &rarr;</a>
-<a href="/mont-saint-michel-from-paris-day-trip/">Mont-Saint-Michel from Paris: the complete day-trip guide &rarr;</a>
+<a href="/mont-saint-michel-map/">Map &amp; best walking route &rarr;</a>
+<a href="/mont-saint-michel-where-to-stay/">Where to stay: island vs mainland &rarr;</a>
+<a href="/best-time-to-visit-mont-saint-michel/">Best time to visit &rarr;</a>
+<a href="/how-to-get-to-mont-saint-michel/">How to get to Mont-Saint-Michel &rarr;</a>
+<a href="/mont-saint-michel-tides/">The tides: reading the schedule &rarr;</a>
+<a href="/mont-saint-michel-audio-guide/">Mont-Saint-Michel audio guide &rarr;</a>
+<a href="/mont-saint-michel-history/">History &amp; legends &rarr;</a>
 </div>
 
 <h2 id="conclusion">The takeaway</h2>
@@ -355,7 +376,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 </div>
 <div class="tb-body">
 <a class="btn block" href="https://www.tiqets.com/mont-saint-michel-abbey-tickets-l145867/?partner=touringbee_limited-180893&tq_campaign=msmguide" target="_blank" rel="noopener sponsored">Book abbey tickets on Tiqets &rarr;</a>
-<a class="btn outline block bokunButton" style="margin-top:10px" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1" target="_blank" rel="noopener sponsored">Add the island audio guide — from &euro;9.99</a>
+<a class="btn outline block bokunButton" style="margin-top:10px" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1">Add the island audio guide — from &euro;9.99</a>
 </div>
 </div>
 
@@ -383,7 +404,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <!-- Sticky buy bar: appears after scroll -->
 <div class="stickybuy" id="stickybuy">
 <div class="p">Mont-Saint-Michel Audio Guide <small>· from &euro;9.99 · offline · in English</small></div>
-<a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1" target="_blank" rel="noopener sponsored">Buy &euro;9.99</a>
+<a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1">Buy &euro;9.99</a>
 </div>
 <script>(function(){var b=document.getElementById('stickybuy');if(!b)return;function s(){if(window.scrollY>700){b.classList.add('show')}else{b.classList.remove('show')}}window.addEventListener('scroll',s,{passive:true});s();})();</script>
 
