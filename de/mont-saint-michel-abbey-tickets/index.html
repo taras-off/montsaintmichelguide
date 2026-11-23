@@ -17,7 +17,8 @@
 <meta name="twitter:description" content="Preise und Öffnungszeiten 2026, Ticketarten, die beste Zeit zum Hinaufgehen und ein Rundgang durch die Abtei Raum für Raum.">
 <meta name="twitter:image" content="https://touringbee.com/wp-content/uploads/mont-saint-michel-1536x1152.jpg">
 <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
 <link rel="canonical" href="https://montsaintmichelguide.com/de/mont-saint-michel-abbey-tickets/">
 <link rel="alternate" hreflang="en" href="https://montsaintmichelguide.com/mont-saint-michel-abbey-tickets/">
 <link rel="alternate" hreflang="fr" href="https://montsaintmichelguide.com/fr/mont-saint-michel-abbey-tickets/">
@@ -39,8 +40,20 @@ a{color:var(--brand-d)}
 /* header */
 header.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
 .topbar{display:flex;align-items:center;justify-content:space-between;height:56px}
-.brand{font-weight:800;font-size:18px;letter-spacing:.2px;text-decoration:none;color:var(--ink)}
-.brand span{color:var(--brand)}
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none}
+.brand img{width:30px;height:30px;display:block;border-radius:50%}
+.brand .bt{color:var(--ink);font-weight:800;font-size:18px;letter-spacing:.2px}
+.brand .g{color:var(--brand)}
+.nav-wrap{display:flex;align-items:center;gap:16px}
+.menu{position:relative}
+.menu>summary{list-style:none;cursor:pointer;font-size:14px;font-weight:600;color:var(--ink);display:inline-flex;align-items:center;gap:5px;padding:6px 4px}
+.menu>summary::-webkit-details-marker{display:none}
+.menu>summary svg{transition:transform .2s}
+.menu[open]>summary svg{transform:rotate(180deg)}
+.dropdown{position:absolute;right:0;top:calc(100% + 6px);background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,.14);min-width:260px;padding:8px;z-index:30}
+.dropdown a{display:block;padding:9px 12px;border-radius:8px;text-decoration:none;color:var(--ink);font-size:14px;margin:0}
+.dropdown a:hover{background:var(--soft)}
+.dropdown .all{border-top:1px solid var(--line);margin-top:6px;font-weight:700;color:var(--brand-d)}
 .lang{font-size:13px;color:var(--muted)}
 .lang a{color:var(--muted);text-decoration:none;margin:0 3px;padding:6px 4px;display:inline-block}
 .lang a.on{color:var(--ink);font-weight:700}
@@ -150,6 +163,16 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 .fbottom .disclaimer{margin-top:6px;max-width:70ch;margin-left:auto;margin-right:auto}
 @media(max-width:720px){.fcols{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.ahero h1{font-size:27px}.topbar{height:auto;flex-wrap:wrap;gap:4px;padding:8px 0}.lang a{padding:8px 7px}}
+@media(max-width:640px){.dropdown{left:0;right:auto;max-width:calc(100vw - 40px)}}
+
+/* Bokun widget: take injected root/cart OUT of document flow (kills CLS); modal untouched */
+#bokun-widgets-root{position:fixed!important;top:0!important;left:0!important;width:0!important;height:0!important;overflow:visible!important;z-index:2147483000!important}
+.bokun-widgets-cart-wrapper{position:fixed!important;top:auto!important;left:auto!important;right:16px!important;bottom:16px!important;margin:0!important;z-index:2147483000!important}
+.tb-banner{display:flex;flex-wrap:wrap;gap:16px;align-items:center;box-sizing:border-box;border:2px solid var(--brand);border-radius:12px;padding:16px;background:var(--soft);margin:28px auto}
+.tb-banner img{display:block;width:132px;height:96px;object-fit:cover;border-radius:8px;margin:0;flex:0 0 132px}
+.tb-banner .tb-body{flex:1 1 260px;min-width:0;padding:0}
+.tb-banner .tb-h{margin:0 0 4px;font-weight:700;color:var(--ink);font-size:18px;line-height:1.35}
+.tb-banner .tb-t{margin:0 0 12px;font-size:16px;line-height:1.55}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -173,8 +196,29 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <body>
 
 <header class="top"><div class="wrap topbar">
-<a class="brand" href="/de/">Mont-Saint-Michel<span>Guide</span></a>
-<nav class="lang"><a href="/de/mont-saint-michel-abbey-tickets/">EN</a><a href="/fr/mont-saint-michel-abbey-tickets/">FR</a><a class="on" href="/de/mont-saint-michel-abbey-tickets/">DE</a><a href="/es/mont-saint-michel-abbey-tickets/">ES</a><a href="/it/mont-saint-michel-abbey-tickets/">IT</a><a href="/pt/mont-saint-michel-abbey-tickets/">PT</a><a href="/pl/mont-saint-michel-abbey-tickets/">PL</a><a href="/ru/mont-saint-michel-abbey-tickets/">RU</a></nav>
+<a class="brand" href="/de/"><img src="../../img/logo.webp" width="30" height="30" alt="Mont-Saint-Michel Guide logo"><span class="bt">Mont-Saint-Michel<span class="g">Guide</span></span></a>
+<div class="nav-wrap">
+<details class="menu"><summary>Guides <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+<div class="dropdown">
+<a href="/de/mont-saint-michel-audio-guide/">Audioguide Mont-Saint-Michel</a>
+<a href="/de/is-mont-saint-michel-worth-visiting/">Lohnt sich der Besuch?</a>
+<a href="/de/mont-saint-michel-history/">Geschichte &amp; Legenden</a>
+<a href="/de/mont-saint-michel-and-saint-malo-one-day/">Mont &amp; Saint-Malo an einem Tag</a>
+<a href="/de/mont-saint-michel-map/">Karte &amp; beste Route</a>
+<a href="/de/best-time-to-visit-mont-saint-michel/">Beste Reisezeit</a>
+<a href="/de/mont-saint-michel-where-to-stay/">Übernachten: Insel oder Festland</a>
+<a href="/de/mont-saint-michel-where-to-eat/">Essen gehen &amp; Mère Poulard</a>
+<a href="/de/mont-saint-michel-with-kids/">Mont-Saint-Michel mit Kindern</a>
+<a href="/de/mont-saint-michel-from-paris-day-trip/">Mont-Saint-Michel ab Paris (Tagesausflug)</a>
+<a href="/de/mont-saint-michel-from-paris-by-train/">Von Paris mit dem Zug</a>
+<a href="/de/mont-saint-michel-tides/">Die Gezeiten: den Kalender lesen</a>
+<a href="/de/mont-saint-michel-bay-crossing/">Wattwanderung &amp; Treibsand</a>
+<a href="/de/mont-saint-michel-abbey-tickets/">Abtei-Tickets: Preise &amp; was drin ist</a>
+<a href="/de/how-to-get-to-mont-saint-michel/">Anreise zum Mont-Saint-Michel</a>
+<a class="all" href="/de/guides/">Alle Guides &rarr;</a>
+</div></details>
+<nav class="lang"><a href="/mont-saint-michel-abbey-tickets/">EN</a><a href="/fr/mont-saint-michel-abbey-tickets/">FR</a><a class="on" href="/de/mont-saint-michel-abbey-tickets/">DE</a><a href="/es/mont-saint-michel-abbey-tickets/">ES</a><a href="/it/mont-saint-michel-abbey-tickets/">IT</a><a href="/pt/mont-saint-michel-abbey-tickets/">PT</a><a href="/pl/mont-saint-michel-abbey-tickets/">PL</a><a href="/ru/mont-saint-michel-abbey-tickets/">RU</a></nav>
+</div>
 </div></header>
 
 <main>
@@ -185,7 +229,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <div class="byline"><span>Von <b>Eugene</b></span><span>Aktualisiert <b>Juli 2026</b></span><span><b>7 Minuten</b> Lesezeit</span></div>
 <div class="herobtns">
 <a class="btn" href="https://www.tiqets.com/mont-saint-michel-abbey-tickets-l145867/?partner=touringbee_limited-180893&tq_campaign=msmguide" target="_blank" rel="noopener sponsored">Abtei-Tickets kaufen</a>
-<a class="btn dark" href="https://touringbee.com/de/product/mont-saint-michel-audioguide-de/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=abbey_hero" target="_blank" rel="noopener sponsored">Audioguide kaufen</a>
+<a class="btn dark bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=de">Audioguide kaufen</a>
 <a class="btn ghost" href="https://www.getyourguide.com/mont-saint-michel-l1805/?partner_id=0M4BUCG&utm_medium=travel_agent" target="_blank" rel="noopener sponsored">Führung buchen</a>
 </div>
 </div></div>
@@ -195,6 +239,14 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <p class="lead">Die Abtei ist der Grund, warum es den Mont-Saint-Michel überhaupt gibt, und für die meisten Besucher der einzige Teil, für den sie wirklich zahlen: Das ummauerte Dorf und die Wehrmauern unten sind kostenlos. Dieser Guide ist für alle, die ihre Tickets für die Abtei Mont-Saint-Michel vorab klären möchten — was der Eintritt kostet, die aktuellen Öffnungszeiten, was inbegriffen ist und was Sie drinnen wirklich sehen.</p>
 
 <p>Wir gehen die Ticketarten durch, die beste Zeit zum Hinaufgehen, den Unterschied zwischen dem Abteibesuch und einem Audio-Rundgang über die Insel und zum Schluss die Innenräume Raum für Raum. Am Ende wissen Sie, ob Sie vorbuchen sollten, wie viel Zeit Sie einplanen und was Sie nicht verpassen dürfen.</p>
+<div class="tb-banner">
+<img src="../../img/product-audioguide.webp" alt="Audioguide Mont-Saint-Michel" width="132" height="96" loading="lazy">
+<div class="tb-body">
+<div class="tb-h">Ihr Ticket gilt für die Abtei — die Insel hat ihre eigene Geschichte</div>
+<div class="tb-t">Eine Audio-Route auf eigene Faust durchs Dorf und über die Wehrmauern bis zur Abtei: 17 Stationen, etwa 2 Stunden Gehzeit, offline, in 8 Sprachen. Abtei-Eintritt nicht enthalten.</div>
+<a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=de">Audioguide — ab &euro;9,99</a>
+</div>
+</div>
 
 <p>Planen Sie noch die ganze Reise? Beginnen Sie mit unserem <a href="/de/">kompletten Mont-Saint-Michel-Guide</a> und kommen Sie dann für die Details zur Abtei hierher zurück.</p>
 
@@ -248,9 +300,9 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Offline-GPS-Karte — jede Aufnahme starten Sie selbst vor Ort</li>
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg> 8 Sprachen, echte Sprecherstimme</li>
 <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg> Funktioniert auf iOS und Android</li>
-<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Selbstgeführt, rund 2–3 Stunden</li>
+<li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Selbstgeführte Route, rund 2 Stunden</li>
 </ul>
-<a class="btn block" href="https://touringbee.com/de/product/mont-saint-michel-audioguide-de/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=abbey_prices" target="_blank" rel="noopener sponsored">Audioguide kaufen — ab 9,99 €</a>
+<a class="btn block bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=de">Audioguide kaufen — ab 9,99 €</a>
 </div>
 </div>
 
@@ -270,8 +322,9 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <h2 id="island-vs-abbey">Inselrundgang oder Abteibesuch</h2>
 <p>Erstbesucher verwechseln oft zwei verschiedene Dinge. Der Abteibesuch ist der kostenpflichtige Weg im Kloster oben. Der Aufstieg durch das Dorf — die Tore, die Grande Rue, die Kirche Saint-Pierre, die Wehrmauern — ist frei und davon getrennt.</p>
-<p>Wenn Sie beim Aufstieg die Geschichten des Dorfes hören möchten, erzählt ein selbstgeführtes Format wie der Insel-Audioweg von TouringBee den Weg vom Ufer bis zu den Abteitoren auf einer Offline-Karte und überlässt Ihnen dann den Rundgang im Abtei-Inneren mit Ihrem eigenen Ticket. Sehen Sie es als zwei Hälften eines Besuchs: Der Inselweg bringt Sie mit Kontext hinauf, das Abtei-Ticket bringt Sie hinein. Sie überschneiden sich nicht, Sie zahlen also nie doppelt für dasselbe. <a href="https://touringbee.com/de/product/mont-saint-michel-audioguide-de/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=abbey_island" target="_blank" rel="noopener sponsored">Zum Insel-Audioguide &rarr;</a></p>
+<p>Wenn Sie beim Aufstieg die Geschichten des Dorfes hören möchten, erzählt ein selbstgeführtes Format wie der Insel-Audioweg von TouringBee den Weg vom Ufer bis zu den Abteitoren auf einer Offline-Karte und überlässt Ihnen dann den Rundgang im Abtei-Inneren mit Ihrem eigenen Ticket. Sehen Sie es als zwei Hälften eines Besuchs: Der Inselweg bringt Sie mit Kontext hinauf, das Abtei-Ticket bringt Sie hinein. Sie überschneiden sich nicht, Sie zahlen also nie doppelt für dasselbe. <a class="bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=de">Zum Insel-Audioguide &rarr;</a></p>
 
+<p class="ctx-link">Für den kostenlosen Teil des Besuchs siehe unsere <a href="/de/mont-saint-michel-map/">Karte mit Rundweg</a> durch Dorf und Wehrmauern.</p>
 <h2 id="best-time">Die beste Tageszeit für den Besuch</h2>
 <p>Gehen Sie zum ersten Einlass am Morgen hinauf — die ruhigste Stunde, bevor die Reisebusse kommen — oder am späten Nachmittag, wenn die Busse abfahren und das Licht auf der Terrasse weicher wird. Die Mittagszeit im Sommer ist am vollsten und langsamsten, besser meiden. Zur Saison siehe unseren Guide zur <a href="/de/best-time-to-visit-mont-saint-michel/">besten Reisezeit</a>.</p>
 
@@ -304,10 +357,13 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 
 <h2 id="more">Weiter entdecken</h2>
 <div class="related">
-<a href="/de/">Mont-Saint-Michel: der komplette Guide für Erstbesucher &rarr;</a>
-<a href="/de/mont-saint-michel-history/">Die Geschichte des Mont-Saint-Michel: von der Vision eines Erzengels zum UNESCO-Welterbe &rarr;</a>
-<a href="/de/mont-saint-michel-architecture/">Die Architektur des Mont-Saint-Michel, einfach erklärt &rarr;</a>
-<a href="/de/mont-saint-michel-from-paris-day-trip/">Mont-Saint-Michel von Paris aus: der komplette Tagesausflug-Guide &rarr;</a>
+<a href="/de/mont-saint-michel-map/">Karte &amp; beste Route &rarr;</a>
+<a href="/de/mont-saint-michel-where-to-stay/">Übernachten: Insel oder Festland &rarr;</a>
+<a href="/de/best-time-to-visit-mont-saint-michel/">Beste Reisezeit &rarr;</a>
+<a href="/de/how-to-get-to-mont-saint-michel/">Anreise zum Mont-Saint-Michel &rarr;</a>
+<a href="/de/mont-saint-michel-tides/">Die Gezeiten: den Kalender lesen &rarr;</a>
+<a href="/de/mont-saint-michel-audio-guide/">Audioguide Mont-Saint-Michel &rarr;</a>
+<a href="/de/mont-saint-michel-history/">Geschichte &amp; Legenden &rarr;</a>
 </div>
 
 <h2 id="conclusion">Das Fazit</h2>
@@ -321,7 +377,7 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 </div>
 <div class="tb-body">
 <a class="btn block" href="https://www.tiqets.com/mont-saint-michel-abbey-tickets-l145867/?partner=touringbee_limited-180893&tq_campaign=msmguide" target="_blank" rel="noopener sponsored">Abtei-Tickets auf Tiqets buchen &rarr;</a>
-<a class="btn outline block" style="margin-top:10px" href="https://touringbee.com/de/product/mont-saint-michel-audioguide-de/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=abbey_conclusion" target="_blank" rel="noopener sponsored">Insel-Audioguide dazunehmen — ab 9,99 €</a>
+<a class="btn outline block bokunButton" style="margin-top:10px" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=de">Insel-Audioguide dazunehmen — ab 9,99 €</a>
 </div>
 </div>
 
@@ -349,9 +405,10 @@ footer{background:#fff;color:var(--muted);font-size:14px;padding:44px 0;border-t
 <!-- Sticky buy bar: appears after scroll -->
 <div class="stickybuy" id="stickybuy">
 <div class="p">Mont-Saint-Michel Audioguide <small>· ab 9,99 € · offline · auf Deutsch</small></div>
-<a class="btn" href="https://touringbee.com/de/product/mont-saint-michel-audioguide-de/?wpam_id=40&utm_source=montsaintmichelguide&utm_medium=referral&utm_campaign=article&utm_content=abbey_stickybar" target="_blank" rel="noopener sponsored">Kaufen 9,99 €</a>
+<a class="btn bokunButton" href="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075" data-src="https://widgets.bokun.io/online-sales/d0f139b1-7599-4d82-9b4b-5388a20fa191/experience/835075?partialView=1&lang=de">Kaufen 9,99 €</a>
 </div>
 <script>(function(){var b=document.getElementById('stickybuy');if(!b)return;function s(){if(window.scrollY>700){b.classList.add('show')}else{b.classList.remove('show')}}window.addEventListener('scroll',s,{passive:true});s();})();</script>
 
+<script>/* Load Bokun engine only on first user interaction — never on page load (keeps CWV/Lighthouse fast) */(function(){var l=0;function b(){if(l)return;l=1;var s=document.createElement('script');s.async=true;s.src='https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=d0f139b1-7599-4d82-9b4b-5388a20fa191';document.body.appendChild(s);}['mouseover','touchstart','scroll','keydown','pointerdown'].forEach(function(e){window.addEventListener(e,b,{once:true,passive:true});});})();</script>
 </body>
 </html>
